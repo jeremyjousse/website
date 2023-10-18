@@ -13,7 +13,7 @@ Inspired by:
 
 ## Icons
 
-Icons are issued form [heroicons.com](https://heroicons.com/).
+Icons are issued form [heroicons.com](https://heroicons.com/) and [SVG REPO](https://www.svgrepo.com/).
 
 ## TODO
 

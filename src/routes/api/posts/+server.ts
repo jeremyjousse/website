@@ -1,7 +1,12 @@
-import type { MarkdownPost, MarkdownPostMetadataAndSlug } from "$lib/types";
+import type {
+  MarkdownPost,
+  MarkdownPostMetadataAndSlug,
+} from "$lib/types/markdownPost";
 import { json, type RequestHandler } from "@sveltejs/kit";
 
 export const prerender = true;
+
+console.log(process.env.NODE_ENV);
 
 export const GET: RequestHandler = async () => {
   const markdownPostModules = import.meta.glob(

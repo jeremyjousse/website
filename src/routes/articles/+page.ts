@@ -1,7 +1,4 @@
-import type {
-  MarkdownPost,
-  MarkdownPostMetadataAndSlug,
-} from "$lib/types/markdownPost";
+import type { MarkdownPostMetadataAndSlug } from "$lib/types/markdownPost";
 
 export const load = async ({ fetch }) => {
   const response = await fetch(`/api/posts`);

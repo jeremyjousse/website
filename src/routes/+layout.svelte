@@ -1,6 +1,7 @@
 <script>
   import "$lib/styles/app.css";
   import Header from "$lib/components/layout/Header.svelte";
+  import Footer from "$lib/components/layout/Footer.svelte";
 </script>
 
 <Header />
@@ -9,4 +10,4 @@
   <slot />
 </main>
 
-<footer class="pt-24 max-w-5xl mx-auto">WIP Footer</footer>
+<Footer />
