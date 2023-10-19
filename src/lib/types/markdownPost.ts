@@ -4,11 +4,9 @@ export type MarkdownPost = {
   metadata: {
     category: string;
     subCategory: string;
-    tags: [string];
+    tags: string[];
     title: string;
     coverImageSlug: string;
-    coverImageWidth: number;
-    coverImageHeight: number;
     publishedAt: string;
     updatedAt?: string;
     summary: string;
