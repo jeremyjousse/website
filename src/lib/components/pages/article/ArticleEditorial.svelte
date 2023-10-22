@@ -24,5 +24,26 @@
         >
       </div>
     </div>
+
+    <aside class="">
+      {#if metadata.category}
+        <div>
+          <span>Rubrique :</span>
+          <a href="{base}/articles/{metadata.category}">
+            {metadata.category}
+          </a>
+        </div>
+      {/if}
+      {#if metadata.tags}
+        <div>
+          <span>Tags :</span>
+          {#each metadata.tags as tag, index}
+            <!-- <a href="{base}/articles/{tag}"> -->
+            {#if index > 0}, {/if}{tag}
+            <!-- </a> -->
+          {/each}
+        </div>
+      {/if}
+    </aside>
   </div>
 </header>

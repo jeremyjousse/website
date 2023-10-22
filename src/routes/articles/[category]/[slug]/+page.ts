@@ -3,7 +3,7 @@ import type { PageLoad } from "./$types";
 
 export const load: PageLoad = async ({ params }) => {
   const markdownPost: MarkdownPost = await import(
-    `../../../../content/articles/${params.category}/${params.slug}.md`
+    `../../../../content/posts/${params.category}/${params.slug}.md`
   );
 
   return {
