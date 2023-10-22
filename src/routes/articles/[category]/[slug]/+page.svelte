@@ -1,4 +1,5 @@
 <script>
+  import "$lib/styles/post.css";
   import { base } from "$app/paths";
   import ArticleEditorial from "$lib/components/pages/article/ArticleEditorial.svelte";
 
@@ -8,14 +9,7 @@
 
 <article>
   <ArticleEditorial {metadata} />
-
-  <Post />
+  <div class="prose-invert prose-lg px-4 py-4 prose mb-10">
+    <Post />
+  </div>
 </article>
-{#if metadata.category}
-  <aside>
-    <h2>Posted in:</h2>
-    <a href="{base}/articles/{metadata.category}">
-      {metadata.category}
-    </a>
-  </aside>
-{/if}
