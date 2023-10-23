@@ -11,6 +11,7 @@ Inspired by:
 - [How to deploy a SvelteKit website to GitHub pages](https://www.okupter.com/blog/deploy-sveltekit-website-to-github-pages)
 - [30 Second Of Code](https://www.30secondsofcode.org/)
 - [Tympanus](https://tympanus.net/codrops/category/tutorials/)
+- [Joy of Code: Google Analytics With SvelteKit](https://joyofcode.xyz/sveltekit-google-analytics)
 
 ## Icons
 

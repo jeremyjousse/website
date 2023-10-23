@@ -7,6 +7,10 @@
   const { metadata, post: Post } = data;
 </script>
 
+<svelte:head>
+  <title>{metadata.title} - blog de Jérémy Jousse</title>
+</svelte:head>
+
 <article>
   <ArticleEditorial {metadata} />
   <div class="prose-invert prose-lg px-4 py-4 prose mb-10">
