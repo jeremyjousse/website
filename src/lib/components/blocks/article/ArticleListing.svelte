@@ -12,7 +12,7 @@
   <a href={postUrl} class="block sm:w-80">
     <div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden">
       <img
-        src={`${base}/articles/${post.metadata.category}/${post.metadata.coverImageSlug}-listing.jpg`}
+        src={`${base}/articles/${post.metadata.category}/${post.metadata.coverImageSlug}/${post.metadata.coverImageSlug}-listing.jpg`}
         alt={post.metadata.title}
         class="object-cover"
       />

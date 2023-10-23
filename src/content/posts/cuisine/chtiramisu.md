@@ -24,7 +24,7 @@ summary: Dessert simplissime mélant influences italiennes et flamandes
 
 ## Recette
 
-##### ÉTAPE 1
+### ÉTAPE 1
 
 Préparer 25 cl de café noir.
 
