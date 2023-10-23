@@ -10,7 +10,7 @@
   <div class="sm:w-3/5 lg:w-full mb-6">
     <div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden">
       <img
-        src={`${base}/articles/${metadata.category}/${metadata.coverImageSlug}.jpg`}
+        src={`${base}/articles/${metadata.category}/${metadata.coverImageSlug}/${metadata.coverImageSlug}.jpg`}
         alt={metadata.title}
         class="object-cover"
       />
