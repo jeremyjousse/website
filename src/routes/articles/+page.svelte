@@ -4,6 +4,10 @@
   export let data;
 </script>
 
+<svelte:head>
+  <title>Articles du blog de Jérémy Jousse</title>
+</svelte:head>
+
 <section data-test-id="articles-section" class="divide-y dark:divide-gray-700">
   {#each data.posts as post}
     <ArticleListing {post} />

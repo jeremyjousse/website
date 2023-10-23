@@ -5,6 +5,10 @@
   export let data;
 </script>
 
+<svelte:head>
+  <title>Articles {data.category} du blog de Jérémy Jousse</title>
+</svelte:head>
+
 <section class="divide-y dark:divide-gray-700">
   {#each data.posts as post}
     <ArticleListing {post} />
