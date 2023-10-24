@@ -1,4 +1,4 @@
 {
   "cSpell.words": ["tailwindcss"],
-  "conventionalCommits.scopes": ["blog"]
+  "conventionalCommits.scopes": ["blog", "github"]
 }
