@@ -32,9 +32,7 @@ export const GET: RequestHandler = async () => {
     postPromises.push(loadPostSlugAndMetadata());
   }
 
-  const posts = (await Promise.all(
-    postPromises
-  )) as MarkdownPostMetadataAndSlug;
+  const posts = await Promise.all(postPromises);
 
   const nowDate = new Date();
 

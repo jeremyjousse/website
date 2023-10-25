@@ -1,16 +1,32 @@
 import { defineConfig } from "vitest/config";
+import istanbul from "vite-plugin-istanbul";
 import { sveltekit } from "@sveltejs/kit/vite";
 import tsconfigPaths from "vite-tsconfig-paths";
 
 export default defineConfig({
-  plugins: [sveltekit(), tsconfigPaths()],
+  build: {
+    sourcemap: true,
+  },
+  plugins: [
+    sveltekit(),
+    tsconfigPaths(),
+    istanbul({
+      include: "src/*",
+      exclude: ["node_modules", "playwright", "vitest/"],
+      extension: [".ts", ".svelte"],
+      requireEnv: false,
+      forceBuildInstrument: true,
+    }),
+  ],
 
   server: {
     port: 3000,
   },
   test: {
     coverage: {
-      reporter: ["text", "json", "html"],
+      provider: "istanbul", // or 'v8'
+      reporter: ["html", "lcov"],
+      reportsDirectory: "./coverage",
     },
     include: ["src/**/*.{test,spec}.{js,ts}"],
     environment: "jsdom",
