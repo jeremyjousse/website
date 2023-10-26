@@ -1,6 +1,9 @@
 on:
   workflow_dispatch:
 
+permissions:
+  issues: write
+
 name: Create labels
 jobs:
   labels:
