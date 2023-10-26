@@ -3,7 +3,7 @@ import type { MarkdownPostMetadataAndSlug } from "$lib/types/markdownPost";
 
 export const load: Load = async ({ fetch, params }) => {
   const { category } = params;
-  const response = await fetch(`/api/posts`);
+  const response = await fetch("/api/posts");
   const allPosts = await response.json();
 
   const posts: MarkdownPostMetadataAndSlug[] = allPosts.filter(
