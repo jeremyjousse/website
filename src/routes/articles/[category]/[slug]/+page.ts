@@ -8,6 +8,7 @@ export const load: PageLoad = async ({ params }) => {
 
   return {
     metadata: markdownPost.metadata,
+    slug: params.slug,
     post: markdownPost.default,
   };
 };

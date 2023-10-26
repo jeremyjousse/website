@@ -6,13 +6,14 @@
   export let post: MarkdownPostMetadataAndSlug;
 
   const postUrl = `${base}/articles/${post.metadata.category}/${post.slug}`;
+  // src={`${base}/articles/${post.metadata.category}/${post.slug}/${post.slug}-listing.jpg`}
 </script>
 
 <article class="p-4 sm:flex sm:space-x-4">
   <a href={postUrl} class="block sm:w-80">
     <div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden">
       <img
-        src={`${base}/articles/${post.metadata.category}/${post.metadata.coverImageSlug}/${post.metadata.coverImageSlug}-listing.jpg`}
+        src={`https://source.unsplash.com/${post.metadata.coverImageSlug}/640x360`}
         alt={post.metadata.title}
         class="object-cover"
       />

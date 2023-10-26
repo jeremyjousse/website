@@ -4,9 +4,11 @@ import type {
 } from "$lib/types/markdownPost";
 import { type RequestHandler, json } from "@sveltejs/kit";
 
+import { filterBlogPosts } from "$lib/utils/blogPosts";
+
 export const prerender = true;
 
-console.log(process.env.NODE_ENV);
+// console.log(process.env.NODE_ENV);
 
 export const GET: RequestHandler = async () => {
   const markdownPostModules = import.meta.glob(
@@ -34,13 +36,8 @@ export const GET: RequestHandler = async () => {
 
   const posts = await Promise.all(postPromises);
 
-  const nowDate = new Date();
-
   const sortedPosts = posts
-    .filter(
-      (post: MarkdownPostMetadataAndSlug) =>
-        post.metadata.publishedAt <= nowDate.toISOString().substring(0, 10)
-    )
+    .filter((post) => filterBlogPosts(post))
     .sort(
       (
         post1: MarkdownPostMetadataAndSlug,

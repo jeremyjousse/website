@@ -2,14 +2,16 @@ import type { ComponentType } from "svelte";
 
 export type MarkdownPost = {
   metadata: {
+    author?: string;
     category: string;
-    subCategory: string;
+    categorySub: string;
+    coverImageSlug: string;
+    draft?: undefined | boolean;
+    publishedAt: string;
+    summary: string;
     tags: string[];
     title: string;
-    coverImageSlug: string;
-    publishedAt: string;
     updatedAt?: string;
-    summary: string;
   };
   default: ComponentType;
 };
