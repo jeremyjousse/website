@@ -6,7 +6,6 @@
   export let post: MarkdownPostMetadataAndSlug;
 
   const postUrl = `${base}/articles/${post.metadata.category}/${post.slug}`;
-  // src={`${base}/articles/${post.metadata.category}/${post.slug}/${post.slug}-listing.jpg`}
 </script>
 
 <article class="p-4 sm:flex sm:space-x-4">
