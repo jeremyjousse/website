@@ -6,7 +6,7 @@ export type MarkdownPost = {
     category: string;
     categorySub: string;
     coverImageSlug: string;
-    draft?: boolean;
+    draft?: undefined | boolean;
     publishedAt: string;
     summary: string;
     tags: string[];

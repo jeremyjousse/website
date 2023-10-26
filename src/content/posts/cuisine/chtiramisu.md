@@ -8,8 +8,7 @@ tags:
   - dessert
   - italie
   - nord
-coverImageSlug: chtiramisu
-coverImageCredit: https://unsplash.com/fr/photos/9_JzprubLOs
+coverImageSlug: 9_JzprubLOs
 summary: Dessert simplissime mélant influences italiennes et flamandes
 ---
 
@@ -25,42 +24,42 @@ summary: Dessert simplissime mélant influences italiennes et flamandes
 
 ## Recette
 
-### ÉTAPE 1
+### Étape 1
 
 Préparer 25 cl de café noir.
 
-### ÉTAPE 2
+### Étape 2
 
 Séparer les blancs des jaunes.
 
-### ÉTAPE 3
+### Étape 3
 
 Melanger les jaunes, le sucre.  
 Ajouter le mascarpone.
 
-### ÉTAPE 4
+### Étape 4
 
 Monter les blancs en neige.
 
-### ÉTAPE 5
+### Étape 5
 
 Incorporer délicatement les blancs en neige à la préparation jaune, sucre, mascarpone.
 
-### ÉTAPE 6
+### Étape 6
 
 Mettre le café dans un bol avec le marsala.
 
-### ÉTAPE 6
+### Étape 6
 
 Mettre un cuillère à soupe de préparation puis recouvrir d'un étage de spéculos préalablement trampés dans le café.  
 Recommencer une fois.  
 Terminer par un cuillère de pérapration.
 
-### ÉTAPE 8
+### Étape 8
 
 Mettre minimum 4 h au réfrigérateur.  
 Les Chiramisu sont encore meilleurs après 24 heures.
 
-### ÉTAPE 9
+### Étape 9
 
 Avant de servir saupouder de cacao amère.
