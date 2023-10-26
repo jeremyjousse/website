@@ -4,7 +4,7 @@
   import ArticleEditorial from "$lib/components/pages/article/ArticleEditorial.svelte";
 
   export let data;
-  const { metadata, post: Post } = data;
+  const { metadata, post: Post, slug } = data;
 </script>
 
 <svelte:head>
@@ -12,7 +12,7 @@
 </svelte:head>
 
 <article>
-  <ArticleEditorial {metadata} />
+  <ArticleEditorial {metadata} {slug} />
   <div class="prose-invert prose-lg px-4 py-4 prose mb-10">
     <Post />
   </div>
