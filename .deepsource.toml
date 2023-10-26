@@ -4,11 +4,10 @@ version = 1
 name = "javascript"
 
   [analyzers.meta]
-  environment = [
-    "nodejs",
-    "vitest"
-  ]
+  environment = ["nodejs", "vitest"]
+  skip_doc_coverage = ["arrow-function-expression"]
   
 [[analyzers]]
 name = "test-coverage"
 enabled = true
+

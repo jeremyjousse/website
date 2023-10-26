@@ -15,7 +15,7 @@ export const GET: RequestHandler = async () => {
 
   const postPromises: Promise<MarkdownPostMetadataAndSlug>[] = [];
 
-  for (const path in markdownPostModules) {
+  for (const path of Object.keys(markdownPostModules)) {
     const loadMarkdownPostModule = markdownPostModules[path];
 
     const loadPostSlugAndMetadata = async function () {

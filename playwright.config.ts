@@ -12,16 +12,14 @@ export default defineConfig({
   /* Run tests in files in parallel */
   fullyParallel: true,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
-  forbidOnly: !!process.env.CI,
+  forbidOnly: Boolean(process.env.CI),
   retries: 2,
   workers: 2,
 
-  reporter: [
-    ["json", { outputFile: "playwright/test-results.json" }],
-    ["list"],
-  ],
+  reporter: process.env.CI
+    ? "github"
+    : [["json", { outputFile: "playwright/test-results.json" }], ["list"]],
   use: {
-    // TODO change server port
     baseURL: "http://localhost:3000",
     trace: "on-first-retry",
     headless: true,
@@ -37,7 +35,6 @@ export default defineConfig({
 
   /* Run your local dev server before starting the tests */
   webServer: {
-    // TODO change server port
     command: "pnpm run dev",
     url: "http://localhost:3000",
     reuseExistingServer: !process.env.CI,
