@@ -19,7 +19,7 @@ pre[class*="language-"] ::-moz-selection,
 code[class*="language-"]::-moz-selection,
 code[class*="language-"] ::-moz-selection {
   text-shadow: none;
-  background: rgba(29, 59, 83, 0.99);
+  background: rgba(29 59 83 99%);
 }
 
 pre[class*="language-"]::selection,
@@ -27,7 +27,7 @@ pre[class*="language-"] ::selection,
 code[class*="language-"]::selection,
 code[class*="language-"] ::selection {
   text-shadow: none;
-  background: rgba(29, 59, 83, 0.99);
+  background: rgba(29 59 83 99%);
 }
 
 @media print {

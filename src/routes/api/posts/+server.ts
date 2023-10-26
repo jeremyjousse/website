@@ -8,8 +8,6 @@ import { filterBlogPosts } from "$lib/utils/blogPosts";
 
 export const prerender = true;
 
-// console.log(process.env.NODE_ENV);
-
 export const GET: RequestHandler = async () => {
   const markdownPostModules = import.meta.glob(
     "../../../content/posts/*/*.md"

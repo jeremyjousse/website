@@ -1,6 +1,5 @@
 import adapter from "@sveltejs/adapter-static";
 import { mdsvex } from "mdsvex";
-// import mdsvexConfig from "./mdsvex.config";
 import preprocess from "svelte-preprocess";
 import rehypeExternalLinks from "rehype-external-links";
 import { vitePreprocess } from "@sveltejs/kit/vite";
@@ -13,7 +12,6 @@ const config = {
     vitePreprocess(),
     mdsvex({
       extensions: [".md"],
-      // inspired from https://github.com/Sevichecc/Urara-Blog
       rehypePlugins: [
         [
           rehypeExternalLinks,
