@@ -18,7 +18,7 @@ summary: Simplissime et tellement bonnes, les crèpes au sucre
 - 1/2 litre de lait
 - 1 pincée de sel
 - 50 grammes de beurre
-- 1 cuillères à soupe de sucre
+- 1 cuillère à soupe de sucre
 - 1 cuillère à soupe d'extrait de vanille
 - 1 cuillère à soupe de rhum
 

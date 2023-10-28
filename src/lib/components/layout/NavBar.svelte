@@ -15,10 +15,10 @@
         <NavItem href={`${base}/articles`} target="_self">Articles</NavItem>
       </li>
       <li>
-        <NavItem href={`${base}/apropos`} target="_self">Apropos</NavItem>
+        <NavItem href={`${base}/apropos`} target="_self">À propos</NavItem>
       </li>
       <li>
-        <IconLink href="https://github.com/jeremyjousse" target="_blank"
+        <IconLink href="https://github.com/jeremyjousse/website" target="_blank"
           ><Github class="w-8 h-8 fill-white" /></IconLink
         >
       </li>

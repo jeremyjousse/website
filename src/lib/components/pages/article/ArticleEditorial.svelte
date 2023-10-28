@@ -5,7 +5,6 @@
   import { formatPublishedAt } from "$lib/utils/dates";
 
   export let metadata: MarkdownPost["metadata"];
-  export let slug: string;
 </script>
 
 <header class="p-4">
