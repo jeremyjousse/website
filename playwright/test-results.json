@@ -1,7 +1,7 @@
 {
   "config": {
-    "configFile": "/Users/JEREMY/Development/Personal/website/playwright.config.ts",
-    "rootDir": "/Users/JEREMY/Development/Personal/website/playwright",
+    "configFile": "/Users/jerry/Development/Personal/website/playwright.config.ts",
+    "rootDir": "/Users/jerry/Development/Personal/website/playwright",
     "forbidOnly": false,
     "fullyParallel": true,
     "globalSetup": null,
@@ -33,12 +33,12 @@
     "quiet": false,
     "projects": [
       {
-        "outputDir": "/Users/JEREMY/Development/Personal/website/test-results",
+        "outputDir": "/Users/jerry/Development/Personal/website/test-results",
         "repeatEach": 1,
         "retries": 2,
         "id": "chromium",
         "name": "chromium",
-        "testDir": "/Users/JEREMY/Development/Personal/website/playwright",
+        "testDir": "/Users/jerry/Development/Personal/website/playwright",
         "testIgnore": [],
         "testMatch": [
           "**/*.@(spec|test).?(c|m)[jt]s?(x)"
@@ -51,7 +51,7 @@
     "version": "1.39.0",
     "workers": 2,
     "webServer": {
-      "command": "npm run dev",
+      "command": "pnpm run dev",
       "url": "http://localhost:3000",
       "reuseExistingServer": true
     }
@@ -78,12 +78,12 @@
                 {
                   "workerIndex": 0,
                   "status": "passed",
-                  "duration": 419,
+                  "duration": 367,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2023-10-19T06:54:51.240Z",
+                  "startTime": "2023-10-28T04:16:37.893Z",
                   "attachments": []
                 }
               ],
@@ -110,12 +110,12 @@
                 {
                   "workerIndex": 1,
                   "status": "passed",
-                  "duration": 639,
+                  "duration": 514,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2023-10-19T06:54:51.241Z",
+                  "startTime": "2023-10-28T04:16:37.893Z",
                   "attachments": []
                 }
               ],
@@ -124,7 +124,7 @@
           ],
           "id": "b3dc6cd63dd63bda1c42-2d8592e644a23782d5ef",
           "file": "dummy.spec.ts",
-          "line": 10,
+          "line": 8,
           "column": 1
         }
       ]
@@ -132,7 +132,7 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2023-10-19T06:54:48.152Z",
-    "duration": 4246.585
+    "startTime": "2023-10-28T04:16:37.650Z",
+    "duration": 2909.616
   }
 }

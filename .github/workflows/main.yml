@@ -76,6 +76,24 @@ jobs:
       - name: Run unit tests and coverage
         run: pnpm run test:coverage
 
+      - name: SonarCloud Scan
+        uses: SonarSource/sonarcloud-github-action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Needed to get PR information, if any
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        with:
+          args: >
+            -Dsonar.host.url=https://sonarcloud.io
+            -Dsonar.organization=jeremyjousse
+            -Dsonar.projectKey=jeremyjousse_website
+            -Dsonar.sources=src
+            -Dsonar.sources.exclusions="**/*.test.ts",
+            -Dsonar.tests=playwright,vitest
+            -Dsonar.javascript.lcov.reportPaths=coverage/lcov.info
+            -Dsonar.pullrequest.branch=${{github.event.pull_request.head.ref}}
+            -Dsonar.pullrequest.key=${{github.event.pull_request.number}}
+            -Dsonar.scm.revision=${{github.event.pull_request.head.ref}}
+
       - name: Report test-coverage to DeepSource
         run: |
           # Install the CLI

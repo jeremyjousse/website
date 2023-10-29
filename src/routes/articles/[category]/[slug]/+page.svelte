@@ -12,7 +12,7 @@
 </svelte:head>
 
 <article>
-  <ArticleEditorial {metadata} {slug} />
+  <ArticleEditorial {metadata} />
   <div class="prose-invert prose-lg px-4 py-4 prose mb-10">
     <Post />
   </div>
