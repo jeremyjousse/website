@@ -145,6 +145,18 @@ Seul petit regret n'avoir pas réussi à suivre les paneaux du
 
 ## Île de porquerolles
 
+Départ aux aurores pour l'île de porquerolles, nous garons notre voiture en façe de l'UCPA La Badine et finisons à vélo
+jusqu'au Port de la Tour Fondue.
+
+<OpenStreetMap mapPosition={{id: "ucpa-la-badine", longitude: 43.040546, latitude: 6.145675,  zoom: 16}} />
+
+La traversée est facturée 22 € par [TLV](https://www.tlv-tvm.com/horaires-tarifs-horaires/), aux quels il faut ajouter 17 € pour les vélos.  
+ℹ️ Petit conseil : hors saison les vélos sont facturés 18 € sur l'île. Pour ce prix
+vous aures des VTT de marque (Scott, Cube ou équivalent) avec frein à disque,
+donc rien ne sert de prendre votre vélo sur la bateau à cette saison.
+
+Sur la journée nous avons eu le temps de parcourir l'île d'Ouest (Batterie des Mèdes) en Est
+
 <BlogPostImage image={{alt:"Île de Porquerolles", url:"pexels:18940954"}} />
 <BlogPostImage image={{alt:"Île de Porquerolles", url:"pexels:18940955"}} />
 <BlogPostImage image={{alt:"Île de Porquerolles", url:"pexels:18940956"}} />
