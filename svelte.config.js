@@ -26,6 +26,12 @@ const config = {
 
   kit: {
     adapter: adapter(),
+    alias: {
+        "lib": "./src/lib",
+        "lib/*": "./src/lib/*",
+        "vitest": "./vitest",
+        "vitest/*": "./vitest/*"
+    },
     paths: {
       base: process.env.NODE_ENV === "production" ? "/website" : "",
     },

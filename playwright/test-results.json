@@ -48,7 +48,7 @@
     ],
     "shard": null,
     "updateSnapshots": "missing",
-    "version": "1.39.0",
+    "version": "1.40.1",
     "workers": 2,
     "webServer": {
       "command": "pnpm run dev",
@@ -78,12 +78,12 @@
                 {
                   "workerIndex": 0,
                   "status": "passed",
-                  "duration": 367,
+                  "duration": 542,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2023-10-28T04:16:37.893Z",
+                  "startTime": "2023-12-16T13:03:08.489Z",
                   "attachments": []
                 }
               ],
@@ -110,12 +110,12 @@
                 {
                   "workerIndex": 1,
                   "status": "passed",
-                  "duration": 514,
+                  "duration": 822,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2023-10-28T04:16:37.893Z",
+                  "startTime": "2023-12-16T13:03:08.487Z",
                   "attachments": []
                 }
               ],
@@ -132,7 +132,11 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2023-10-28T04:16:37.650Z",
-    "duration": 2909.616
+    "startTime": "2023-12-16T13:03:05.522Z",
+    "duration": 5959.398,
+    "expected": 2,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
   }
 }
