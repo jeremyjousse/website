@@ -8,7 +8,7 @@ tags:
   - dessert
   - italie
   - nord
-coverImageSlug: 9_JzprubLOs
+coverImageSlug: unsplash:9_JzprubLOs
 summary: Dessert simplissime mélant influences italiennes et flamandes
 ---
 

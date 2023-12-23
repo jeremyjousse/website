@@ -3,6 +3,7 @@
   import AuthorInfo from "$lib/components/atoms/AuthorInfo.svelte";
   import type { MarkdownPost } from "$lib/types/markdownPost";
   import { formatPublishedAt } from "$lib/utils/dates";
+  import BlogPostCoverImage from "lib/components/atoms/BlogPostCoverImage.svelte";
 
   export let metadata: MarkdownPost["metadata"];
 </script>
@@ -10,10 +11,10 @@
 <header class="p-4">
   <div class="sm:w-3/5 lg:w-full mb-6">
     <div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden">
-      <img
-        src={`https://source.unsplash.com/${metadata.coverImageSlug}/1984x1116`}
+      <BlogPostCoverImage
+        src={metadata.coverImageSlug}
         alt={metadata.title}
-        class="object-cover"
+        klass="object-cover"
       />
     </div>
     <div>
@@ -46,7 +47,8 @@
                 <span>Tags :</span>
                 {#each metadata.tags as tag, index}
                   <!-- <a href="{base}/articles/{tag}"> -->
-                  {#if index > 0}, {/if}{tag}
+                  {#if index > 0},
+                  {/if}{tag}
                   <!-- </a> -->
                 {/each}
               </div>

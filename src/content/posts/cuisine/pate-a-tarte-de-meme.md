@@ -6,7 +6,7 @@ category: cuisine
 subCategory: dessert
 tags:
   - dessert
-coverImageSlug: eydiKD88C8w
+coverImageSlug: unsplash:eydiKD88C8w
 summary: En deux temps trois mouvements, la pâte à tarte délicieuse et inratable de mémé
 ---
 

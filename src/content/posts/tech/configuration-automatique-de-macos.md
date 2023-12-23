@@ -9,7 +9,7 @@ tags:
   - terminal
   - macOS
   - bash
-coverImageSlug: WiONHd_zYI4
+coverImageSlug: unsplash:WiONHd_zYI4
 summary: J'ai créé un repos git avec toutes les configurations d'installation et de parametrage des outils de développement que j'utilise au quotidien.
 ---
 

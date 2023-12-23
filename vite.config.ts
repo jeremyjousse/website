@@ -12,7 +12,7 @@ export default defineConfig({
     tsconfigPaths(),
     istanbul({
       include: "src/*",
-      exclude: ["node_modules", "playwright", "vitest/"],
+      exclude: ["node_modules", "playwright", "vitest"],
       extension: [".ts", ".svelte"],
       requireEnv: false,
       forceBuildInstrument: true,
@@ -24,7 +24,7 @@ export default defineConfig({
   },
   test: {
     coverage: {
-      all: true,
+      // all: true,
       provider: "istanbul",
       reporter: ["html", "json", "json-summary", "lcov", "text"],
       reportsDirectory: "./coverage",

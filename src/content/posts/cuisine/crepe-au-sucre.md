@@ -7,7 +7,7 @@ subCategory: dessert
 tags:
   - dessert
   - nord
-coverImageSlug: h1rfvAzzwdY
+coverImageSlug: unsplash:h1rfvAzzwdY
 summary: Simplissime et tellement bonnes, les crèpes au sucre
 ---
 

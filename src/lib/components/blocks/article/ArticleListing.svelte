@@ -2,6 +2,7 @@
   import { base } from "$app/paths";
   import type { MarkdownPostMetadataAndSlug } from "$lib/types/markdownPost";
   import { formatPublishedAt } from "$lib/utils/dates";
+  import BlogPostCoverImage from "lib/components/atoms/BlogPostCoverImage.svelte";
 
   export let post: MarkdownPostMetadataAndSlug;
 
@@ -11,10 +12,10 @@
 <article class="p-4 sm:flex sm:space-x-4">
   <a href={postUrl} class="block sm:w-80">
     <div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden">
-      <img
-        src={`https://source.unsplash.com/${post.metadata.coverImageSlug}/640x360`}
+      <BlogPostCoverImage
+        src={post.metadata.coverImageSlug}
         alt={post.metadata.title}
-        class="object-cover"
+        klass="object-cover"
       />
     </div>
   </a>

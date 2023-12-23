@@ -7,7 +7,7 @@ subCategory: plat
 tags:
   - plat
   - nord
-coverImageSlug: ElIBRgC9Qdo
+coverImageSlug: unsplash:ElIBRgC9Qdo
 summary: Le plat du Nord par excellence, à servir avec de bonnes frites
 ---
 

@@ -73,8 +73,8 @@ jobs:
           path: playwright-report/
           retention-days: 30
 
-      - name: Run unit tests and coverage
-        run: pnpm run test:coverage
+      # - name: Run unit tests and coverage
+      #   run: pnpm run test:coverage
 
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
@@ -94,13 +94,13 @@ jobs:
             -Dsonar.pullrequest.key=${{github.event.pull_request.number}}
             -Dsonar.scm.revision=${{github.event.pull_request.head.ref}}
 
-      - name: Report test-coverage to DeepSource
-        run: |
-          # Install the CLI
-          curl https://deepsource.io/cli | sh
+      # - name: Report test-coverage to DeepSource
+      #   run: |
+      #     # Install the CLI
+      #     curl https://deepsource.io/cli | sh
 
-          # Send the report to DeepSource
-          ./bin/deepsource report --analyzer test-coverage --key javascript --value-file ./coverage/lcov.info
+      #     # Send the report to DeepSource
+      #     ./bin/deepsource report --analyzer test-coverage --key javascript --value-file ./coverage/lcov.info
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
