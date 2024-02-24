@@ -52,7 +52,7 @@ jobs:
       - uses: actions/setup-node@v3
         name: Uses pnpm
         with:
-          node-version: 18
+          node-version: lts/*
 
       - uses: pnpm/action-setup@v2
         name: Uses pnpm
