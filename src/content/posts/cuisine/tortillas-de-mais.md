@@ -7,7 +7,7 @@ subCategory: plat
 tags:
   - plat
   - mexique
-coverImageSlug: unsplash:7iB1Pa_OBL4
+coverImageSlug: unsplash:7iB1Pa_OBL4:1599232288126-7dbd2127db14
 summary: Parfaites pour vos plats mexicains, le plus long c'est de tout nettoyer
 ---
 

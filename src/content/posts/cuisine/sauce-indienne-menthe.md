@@ -7,7 +7,7 @@ subCategory: sauce
 tags:
   - sauce
   - inde
-coverImageSlug: unsplash:24badwxiiIw
+coverImageSlug: unsplash:24badwxiiIw:1589301773859-bb024d3ad558
 summary: Pour accompager poulet ou naan
 ---
 

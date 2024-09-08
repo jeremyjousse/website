@@ -7,7 +7,7 @@ subCategory: dessert
 tags:
   - dessert
   - petit-dejeuner
-coverImageSlug: unsplash:qp7WA8AV2x0
+coverImageSlug: unsplash:qp7WA8AV2x0:1528207776546-365bb710ee93
 summary: En un tour de main vos pancakes comme aux Etats Unis
 ---
 

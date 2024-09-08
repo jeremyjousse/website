@@ -7,7 +7,7 @@ subCategory: plat
 tags:
   - plat
   - nord
-coverImageSlug: unsplash:ooZn_UXZ7n8
+coverImageSlug: unsplash:ooZn_UXZ7n8:1623238912680-26fc5ffb57e4
 summary: Incontournables, LA recette des frites avec double cuisson
 ---
 

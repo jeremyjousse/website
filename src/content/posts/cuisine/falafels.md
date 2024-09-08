@@ -7,7 +7,7 @@ subCategory: plat
 tags:
   - plat
   - liban
-coverImageSlug: unsplash:illep4eI8HQ
+coverImageSlug: unsplash:illep4eI8HQ:1593001869807-9b07543c8688
 summary: J'ai enfin trouvé les bonne proportions pour des falafels qui se tiennent à la cuisson
 ---
 
