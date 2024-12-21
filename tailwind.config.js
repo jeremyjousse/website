@@ -1,4 +1,6 @@
-/** @type {import('tailwindcss').Config} */
+import aspectRatio from "@tailwindcss/aspect-ratio";
+import typography from "@tailwindcss/typography";
+
 export default {
   content: ["./src/**/*.{html,js,svelte,ts}"],
   darkMode: "class",
@@ -9,8 +11,5 @@ export default {
       },
     },
   },
-  plugins: [
-    require("@tailwindcss/typography"),
-    require("@tailwindcss/aspect-ratio"),
-  ],
+  plugins: [aspectRatio, typography],
 };
