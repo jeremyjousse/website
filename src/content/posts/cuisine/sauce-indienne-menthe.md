@@ -11,6 +11,8 @@ coverImageSlug: unsplash:24badwxiiIw:1589301773859-bb024d3ad558
 summary: Pour accompager poulet ou naan
 ---
 
+## Ingrédients
+
 - 10 brins de menthe
 - 10 brins de coriandre
 - 1/2 cuillères à café de cumin

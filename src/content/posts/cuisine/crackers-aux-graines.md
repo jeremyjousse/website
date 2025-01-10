@@ -11,6 +11,8 @@ coverImageSlug: unsplash:7wNxTVddTx8:1705868432559-211198009991
 summary: De délicieux petits biscuits sains pour l'appétit
 ---
 
+## Ingrédients
+
 - 1 tasse de graines de lin
 - 2 cuillères à soupe de graines de chia
 - 1 tasse de graines de tournesol

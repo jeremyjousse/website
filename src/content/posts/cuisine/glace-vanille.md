@@ -10,6 +10,8 @@ coverImageSlug: unsplash:SRYAhnTHSck:1590080962330-747c6aba8028
 summary: Une base de glace à décliner à l'infini
 ---
 
+## Ingrédients
+
 - 1 cuillère d'extrait de vanille
 - 5 jaunes d’oeuf
 - 90 g de sucre

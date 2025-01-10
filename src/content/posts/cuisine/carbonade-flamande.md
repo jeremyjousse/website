@@ -11,6 +11,8 @@ coverImageSlug: unsplash:C5UBZv67Cn8:1723195269662-c4addeef5f59
 summary: Le plat du Nord par excellence, à servir avec de bonnes frites
 ---
 
+## Ingrédients
+
 - 2x25g de beurre
 - 2 beaux oignons
 - 1 cuillères à soupe de cassonade

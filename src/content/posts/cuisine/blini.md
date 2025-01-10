@@ -10,6 +10,8 @@ coverImageSlug: pexels:8694469
 summary: Délicieux pour épater lors de l'appétit
 ---
 
+## Ingrédients
+
 - 60 g de farine de sarrasin
 - 60 g de farine traditionnelle
 - 1/2 sachet de levure chimique

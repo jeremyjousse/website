@@ -1,4 +1,5 @@
 {
-  "cSpell.words": ["tailwindcss"],
-  "conventionalCommits.scopes": ["blog", "github"]
+  "cSpell.words": ["Baghrir", "Étape", "jeremy", "tailwindcss"],
+  "conventionalCommits.scopes": ["blog", "github"],
+  "cSpell.language": "en,fr"
 }
