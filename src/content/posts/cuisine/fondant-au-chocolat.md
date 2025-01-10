@@ -2,7 +2,6 @@
 author: jeremy-jousse
 title: Fondant au chocolat
 publishedAt: "2025-01-10"
-draft: true
 category: cuisine
 subCategory: dessert
 tags:
