@@ -2,12 +2,11 @@
 author: jeremy-jousse
 title: Baghrir
 publishedAt: "2025-01-05"
-draft: true
 category: cuisine
 subCategory: dessert
 tags:
   - dessert
-coverImageSlug: pexels:6061399
+coverImageSlug: pinterest:99/86/f5/9986f56fdd085c10fd99f9e82717d35b
 summary: Crêpes aux mille trous a servir avec du miel
 ---
 
