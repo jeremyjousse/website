@@ -6,7 +6,7 @@ category: cuisine
 subCategory: dessert
 tags:
   - dessert
-coverImageSlug: pinterest:/9b/c2/f5/9bc2f554fa7c843ed7e7007380739cd1
+coverImageSlug: pinterest:/e5/0c/58/e50c58046da6af2382c5a32c094e57f8
 summary: Des petites douceurs coco à croquer
 ---
 
