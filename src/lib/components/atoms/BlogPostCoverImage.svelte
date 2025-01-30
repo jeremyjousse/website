@@ -12,6 +12,8 @@
   } else if (src.includes("pinterest:")) {
     const slug = src.replace("pinterest:", "");
     src = `https://i.pinimg.com/1200x/${slug}.jpg`;
+  } else {
+    // src = src;
   }
 </script>
 
