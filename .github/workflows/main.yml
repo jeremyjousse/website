@@ -72,7 +72,7 @@ jobs:
         run: pnpm exec playwright test
 
       - name: 🛻 Upload Artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         if: always()
         with:
           name: playwright-report
@@ -106,7 +106,7 @@ jobs:
       #     ./bin/deepsource report --analyzer test-coverage --key javascript --value-file ./coverage/lcov.info
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v2
+        uses: actions/upload-pages-artifact@v3
         with:
           path: ./build
 
@@ -118,5 +118,5 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: 🚀 Deploy page
-        uses: actions/deploy-pages@v1
+        uses: actions/deploy-pages@v4
         id: deployment
