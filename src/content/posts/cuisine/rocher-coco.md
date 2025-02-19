@@ -6,7 +6,7 @@ category: cuisine
 subCategory: dessert
 tags:
   - dessert
-coverImageSlug: pinterest:/e5/0c/58/e50c58046da6af2382c5a32c094e57f8
+coverImageSlug: https://cdn1.lamandorle.com/wp-content/uploads/2021/04/rocher-a-la-noix-de-coco-cover-la-mandorle.jpg
 summary: Des petites douceurs coco à croquer
 ---
 
