@@ -1,10 +1,9 @@
 <script>
 	import '$lib/styles/post.css';
-	import { base } from '$app/paths';
 	import ArticleEditorial from '$lib/components/pages/article/ArticleEditorial.svelte';
 
 	export let data;
-	const { metadata, post: Post, slug } = data;
+	const { metadata, post: Post } = data;
 </script>
 
 <svelte:head>

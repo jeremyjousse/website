@@ -1,5 +1,4 @@
 <script>
-	import { base } from '$app/paths';
 	import ArticleListing from '$lib/components/blocks/article/ArticleListing.svelte';
 
 	export let data;
