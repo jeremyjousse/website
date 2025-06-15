@@ -9,7 +9,7 @@
 </svelte:head>
 
 <section data-testid="articles-section" class="divide-y dark:divide-gray-700">
-	{#each data.posts as post}
+	{#each data.posts as post (post.slug)}
 		<ArticleListing {post} />
 	{/each}
 </section>

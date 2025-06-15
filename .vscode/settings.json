@@ -1,5 +1,5 @@
 {
-	"cSpell.words": ["Baghrir", "jeremy", "pinterest", "tailwindcss"],
+	"cSpell.words": ["Baghrir", "jeremy", "mdsvex", "pinterest", "tailwindcss", "testid"],
 	"conventionalCommits.scopes": ["blog", "github"],
 	"cSpell.language": "en,fr",
 	"sonarlint.connectedMode.project": {

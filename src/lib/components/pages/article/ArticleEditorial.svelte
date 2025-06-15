@@ -41,7 +41,7 @@
 						{#if metadata.tags}
 							<div>
 								<span>Tags :</span>
-								{#each metadata.tags as tag, index}
+								{#each metadata.tags as tag, index (index)}
 									<!-- <a href="{base}/articles/{tag}"> -->
 									{#if index > 0},
 									{/if}{tag}
