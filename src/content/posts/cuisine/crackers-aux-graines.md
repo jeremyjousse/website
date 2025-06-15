@@ -1,7 +1,7 @@
 ---
 author: leo-paul-jousse
 title: Crackers aux graines
-publishedAt: "2024-09-10"
+publishedAt: '2024-09-10'
 category: cuisine
 subCategory: aperitif
 tags:

@@ -1,7 +1,7 @@
 ---
 author: jeremy-jousse
 title: Glace vanille
-publishedAt: "2024-12-29"
+publishedAt: '2024-12-29'
 category: cuisine
 subCategory: dessert
 tags:

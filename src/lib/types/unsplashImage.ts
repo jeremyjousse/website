@@ -1,4 +1,4 @@
 export type UnsplashImage = {
-  alt: string;
-  slug: string;
+	alt: string;
+	slug: string;
 };

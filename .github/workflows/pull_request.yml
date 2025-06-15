@@ -3,7 +3,7 @@ name: Build and Deploy to Github Pages
 on:
   pull_request:
     types: [opened, synchronize, reopened]
-    branches: ["main"]
+    branches: ['main']
 
 jobs:
   build:
@@ -90,8 +90,8 @@ jobs:
             -Dsonar.pullrequest.key=${{github.event.pull_request.number}}
             -Dsonar.scm.revision=${{github.event.pull_request.head.ref}}
 
-      - name: "Report test-coverage to Github"
+      - name: 'Report test-coverage to Github'
         if: always() # Also generate the report if tests are failing
         uses: davelosert/vitest-coverage-report-action@v2
         with:
-          json-final-path: "./coverage/coverage-final.json"
+          json-final-path: './coverage/coverage-final.json'

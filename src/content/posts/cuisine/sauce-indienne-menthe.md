@@ -1,7 +1,7 @@
 ---
 author: jeremy-jousse
 title: Sauce indienne à la menthe
-publishedAt: "2024-04-13"
+publishedAt: '2024-04-13'
 category: cuisine
 subCategory: sauce
 tags:

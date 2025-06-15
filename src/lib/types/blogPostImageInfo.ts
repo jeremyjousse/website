@@ -1,4 +1,4 @@
 export type BlogPostImageInfo = {
-  alt: string;
-  url: string;
+	alt: string;
+	url: string;
 };

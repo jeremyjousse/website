@@ -1,7 +1,7 @@
 ---
 author: jeremy-jousse
 title: Baghrir
-publishedAt: "2025-01-05"
+publishedAt: '2025-01-05'
 category: cuisine
 subCategory: dessert
 tags:

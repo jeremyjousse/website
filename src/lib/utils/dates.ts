@@ -4,9 +4,9 @@
  * @returns the formatted date in french format
  */
 export function formatPublishedAt(date: string) {
-  return new Date(date).toLocaleDateString("fr-FR", {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-  });
+	return new Date(date).toLocaleDateString('fr-FR', {
+		year: 'numeric',
+		month: 'long',
+		day: 'numeric'
+	});
 }

@@ -1,7 +1,7 @@
 ---
 author: jeremy-jousse
 title: Tortillas de maïs
-publishedAt: "2020-03-03"
+publishedAt: '2020-03-03'
 category: cuisine
 subCategory: plat
 tags:

@@ -1,7 +1,7 @@
 ---
 author: jeremy-jousse
 title: Frites maison
-publishedAt: "2023-12-15"
+publishedAt: '2023-12-15'
 category: cuisine
 subCategory: plat
 tags:

@@ -1,7 +1,7 @@
 ---
 author: jeremy-jousse
 title: Crumble aux pommes
-publishedAt: "2025-02-23"
+publishedAt: '2025-02-23'
 category: cuisine
 subCategory: dessert
 tags:

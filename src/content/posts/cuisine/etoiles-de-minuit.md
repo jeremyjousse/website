@@ -1,7 +1,7 @@
 ---
 author: leo-paul-jousse
 title: Etoiles de minuit
-publishedAt: "2024-12-22"
+publishedAt: '2024-12-22'
 category: cuisine
 subCategory: dessert
 tags:

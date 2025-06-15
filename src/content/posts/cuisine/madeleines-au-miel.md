@@ -1,7 +1,7 @@
 ---
 author: jeremy-jousse
 title: Madeleines au miel
-publishedAt: "2025-06-10"
+publishedAt: '2025-06-10'
 category: cuisine
 subCategory: dessert
 tags:

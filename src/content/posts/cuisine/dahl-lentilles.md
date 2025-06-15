@@ -1,7 +1,7 @@
 ---
 author: jeremy-jousse
 title: Dahl de lentilles corail
-publishedAt: "2025-01-16"
+publishedAt: '2025-01-16'
 category: cuisine
 subCategory: plat
 tags:

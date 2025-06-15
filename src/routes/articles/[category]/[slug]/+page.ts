@@ -1,14 +1,14 @@
-import type { MarkdownPost } from "$lib/types/markdownPost";
-import type { PageLoad } from "./$types";
+import type { MarkdownPost } from '$lib/types/markdownPost';
+import type { PageLoad } from './$types';
 
 export const load: PageLoad = async ({ params }) => {
-  const markdownPost: MarkdownPost = await import(
-    `../../../../content/posts/${params.category}/${params.slug}.md`
-  );
+	const markdownPost: MarkdownPost = await import(
+		`../../../../content/posts/${params.category}/${params.slug}.md`
+	);
 
-  return {
-    metadata: markdownPost.metadata,
-    slug: params.slug,
-    post: markdownPost.default,
-  };
+	return {
+		metadata: markdownPost.metadata,
+		slug: params.slug,
+		post: markdownPost.default
+	};
 };

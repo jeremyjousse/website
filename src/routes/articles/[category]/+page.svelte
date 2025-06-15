@@ -1,16 +1,16 @@
 <script>
-  import { base } from "$app/paths";
-  import ArticleListing from "$lib/components/blocks/article/ArticleListing.svelte";
+	import { base } from '$app/paths';
+	import ArticleListing from '$lib/components/blocks/article/ArticleListing.svelte';
 
-  export let data;
+	export let data;
 </script>
 
 <svelte:head>
-  <title>Articles {data.category} du blog de Jérémy Jousse</title>
+	<title>Articles {data.category} du blog de Jérémy Jousse</title>
 </svelte:head>
 
 <section class="divide-y dark:divide-gray-700">
-  {#each data.posts as post}
-    <ArticleListing {post} />
-  {/each}
+	{#each data.posts as post}
+		<ArticleListing {post} />
+	{/each}
 </section>

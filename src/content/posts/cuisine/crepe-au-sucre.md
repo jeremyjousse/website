@@ -1,7 +1,7 @@
 ---
 author: jeremy-jousse
 title: Crêpes au sucre
-publishedAt: "2020-10-03"
+publishedAt: '2020-10-03'
 category: cuisine
 subCategory: dessert
 tags:

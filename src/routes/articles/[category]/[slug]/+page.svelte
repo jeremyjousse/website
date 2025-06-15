@@ -1,19 +1,19 @@
 <script>
-  import "$lib/styles/post.css";
-  import { base } from "$app/paths";
-  import ArticleEditorial from "$lib/components/pages/article/ArticleEditorial.svelte";
+	import '$lib/styles/post.css';
+	import { base } from '$app/paths';
+	import ArticleEditorial from '$lib/components/pages/article/ArticleEditorial.svelte';
 
-  export let data;
-  const { metadata, post: Post, slug } = data;
+	export let data;
+	const { metadata, post: Post, slug } = data;
 </script>
 
 <svelte:head>
-  <title>{metadata.title} - blog de Jérémy Jousse</title>
+	<title>{metadata.title} - blog de Jérémy Jousse</title>
 </svelte:head>
 
 <article>
-  <ArticleEditorial {metadata} />
-  <div class="prose-invert prose-lg px-4 py-4 prose mb-10">
-    <Post />
-  </div>
+	<ArticleEditorial {metadata} />
+	<div class="prose prose-lg prose-invert mb-10 px-4 py-4">
+		<Post />
+	</div>
 </article>

@@ -1,7 +1,7 @@
 ---
 author: jeremy-jousse
 title: Tarte Tatin
-publishedAt: "2023-12-23"
+publishedAt: '2023-12-23'
 category: cuisine
 subCategory: dessert
 tags:

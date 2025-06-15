@@ -1,142 +1,137 @@
 {
-  "config": {
-    "configFile": "/Users/jerry/Development/Personal/website/playwright.config.ts",
-    "rootDir": "/Users/jerry/Development/Personal/website/playwright",
-    "forbidOnly": false,
-    "fullyParallel": true,
-    "globalSetup": null,
-    "globalTeardown": null,
-    "globalTimeout": 0,
-    "grep": {},
-    "grepInvert": null,
-    "maxFailures": 0,
-    "metadata": {
-      "actualWorkers": 2
-    },
-    "preserveOutput": "always",
-    "reporter": [
-      [
-        "json",
-        {
-          "outputFile": "playwright/test-results.json"
-        }
-      ],
-      [
-        "list",
-        null
-      ]
-    ],
-    "reportSlowTests": {
-      "max": 5,
-      "threshold": 15000
-    },
-    "quiet": false,
-    "projects": [
-      {
-        "outputDir": "/Users/jerry/Development/Personal/website/test-results",
-        "repeatEach": 1,
-        "retries": 2,
-        "id": "chromium",
-        "name": "chromium",
-        "testDir": "/Users/jerry/Development/Personal/website/playwright",
-        "testIgnore": [],
-        "testMatch": [
-          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
-        ],
-        "timeout": 30000
-      }
-    ],
-    "shard": null,
-    "updateSnapshots": "missing",
-    "version": "1.40.1",
-    "workers": 2,
-    "webServer": {
-      "command": "pnpm run dev",
-      "url": "http://localhost:3000",
-      "reuseExistingServer": true
-    }
-  },
-  "suites": [
-    {
-      "title": "dummy.spec.ts",
-      "file": "dummy.spec.ts",
-      "column": 0,
-      "line": 0,
-      "specs": [
-        {
-          "title": "HP has heading",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "status": "passed",
-                  "duration": 542,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2023-12-16T13:03:08.489Z",
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "b3dc6cd63dd63bda1c42-cdc6c615e7c1c736cc56",
-          "file": "dummy.spec.ts",
-          "line": 3,
-          "column": 1
-        },
-        {
-          "title": "load articles page",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 1,
-                  "status": "passed",
-                  "duration": 822,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2023-12-16T13:03:08.487Z",
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "b3dc6cd63dd63bda1c42-2d8592e644a23782d5ef",
-          "file": "dummy.spec.ts",
-          "line": 8,
-          "column": 1
-        }
-      ]
-    }
-  ],
-  "errors": [],
-  "stats": {
-    "startTime": "2023-12-16T13:03:05.522Z",
-    "duration": 5959.398,
-    "expected": 2,
-    "skipped": 0,
-    "unexpected": 0,
-    "flaky": 0
-  }
+	"config": {
+		"configFile": "/Users/jerry/Development/Personal/website/playwright.config.ts",
+		"rootDir": "/Users/jerry/Development/Personal/website/playwright",
+		"forbidOnly": false,
+		"fullyParallel": true,
+		"globalSetup": null,
+		"globalTeardown": null,
+		"globalTimeout": 0,
+		"grep": {},
+		"grepInvert": null,
+		"maxFailures": 0,
+		"metadata": {
+			"actualWorkers": 2
+		},
+		"preserveOutput": "always",
+		"reporter": [
+			[
+				"json",
+				{
+					"outputFile": "playwright/test-results.json"
+				}
+			],
+			["list", null]
+		],
+		"reportSlowTests": {
+			"max": 5,
+			"threshold": 15000
+		},
+		"quiet": false,
+		"projects": [
+			{
+				"outputDir": "/Users/jerry/Development/Personal/website/test-results",
+				"repeatEach": 1,
+				"retries": 2,
+				"id": "chromium",
+				"name": "chromium",
+				"testDir": "/Users/jerry/Development/Personal/website/playwright",
+				"testIgnore": [],
+				"testMatch": ["**/*.@(spec|test).?(c|m)[jt]s?(x)"],
+				"timeout": 30000
+			}
+		],
+		"shard": null,
+		"updateSnapshots": "missing",
+		"version": "1.40.1",
+		"workers": 2,
+		"webServer": {
+			"command": "pnpm run dev",
+			"url": "http://localhost:3000",
+			"reuseExistingServer": true
+		}
+	},
+	"suites": [
+		{
+			"title": "dummy.spec.ts",
+			"file": "dummy.spec.ts",
+			"column": 0,
+			"line": 0,
+			"specs": [
+				{
+					"title": "HP has heading",
+					"ok": true,
+					"tags": [],
+					"tests": [
+						{
+							"timeout": 30000,
+							"annotations": [],
+							"expectedStatus": "passed",
+							"projectId": "chromium",
+							"projectName": "chromium",
+							"results": [
+								{
+									"workerIndex": 0,
+									"status": "passed",
+									"duration": 542,
+									"errors": [],
+									"stdout": [],
+									"stderr": [],
+									"retry": 0,
+									"startTime": "2023-12-16T13:03:08.489Z",
+									"attachments": []
+								}
+							],
+							"status": "expected"
+						}
+					],
+					"id": "b3dc6cd63dd63bda1c42-cdc6c615e7c1c736cc56",
+					"file": "dummy.spec.ts",
+					"line": 3,
+					"column": 1
+				},
+				{
+					"title": "load articles page",
+					"ok": true,
+					"tags": [],
+					"tests": [
+						{
+							"timeout": 30000,
+							"annotations": [],
+							"expectedStatus": "passed",
+							"projectId": "chromium",
+							"projectName": "chromium",
+							"results": [
+								{
+									"workerIndex": 1,
+									"status": "passed",
+									"duration": 822,
+									"errors": [],
+									"stdout": [],
+									"stderr": [],
+									"retry": 0,
+									"startTime": "2023-12-16T13:03:08.487Z",
+									"attachments": []
+								}
+							],
+							"status": "expected"
+						}
+					],
+					"id": "b3dc6cd63dd63bda1c42-2d8592e644a23782d5ef",
+					"file": "dummy.spec.ts",
+					"line": 8,
+					"column": 1
+				}
+			]
+		}
+	],
+	"errors": [],
+	"stats": {
+		"startTime": "2023-12-16T13:03:05.522Z",
+		"duration": 5959.398,
+		"expected": 2,
+		"skipped": 0,
+		"unexpected": 0,
+		"flaky": 0
+	}
 }

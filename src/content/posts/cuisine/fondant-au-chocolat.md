@@ -1,7 +1,7 @@
 ---
 author: jeremy-jousse
 title: Fondant au chocolat
-publishedAt: "2025-01-10"
+publishedAt: '2025-01-10'
 category: cuisine
 subCategory: dessert
 tags:
@@ -33,7 +33,6 @@ Dans un saladier mélanger les jaunes d'oeufs et le sucre.
 
 Incorporer le sucre et la farine.  
 Ajouter le mélange chocolat-beurre.
-
 
 ### Étape 4
 

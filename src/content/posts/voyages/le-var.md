@@ -4,7 +4,7 @@ category: voyages
 categorySub: europe
 coverImageSlug: unsplash:pMM1JSwI_ko:1698343616919-7b53e16cbb2c
 draft: true
-publishedAt: "2023-10-22"
+publishedAt: '2023-10-22'
 summary: Découverte de la région de Gien dans le Var.
 title: Le Var
 tags:

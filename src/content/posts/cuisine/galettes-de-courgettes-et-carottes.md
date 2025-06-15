@@ -1,7 +1,7 @@
 ---
 author: jeremy-jousse
 title: Galettes de courgettes et carottes
-publishedAt: "2025-05-10"
+publishedAt: '2025-05-10'
 category: cuisine
 subCategory: plat
 tags:

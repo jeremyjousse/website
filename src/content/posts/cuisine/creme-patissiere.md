@@ -1,7 +1,7 @@
 ---
 author: jeremy-jousse
 title: Crème pâtissière
-publishedAt: "2025-01-14"
+publishedAt: '2025-01-14'
 category: cuisine
 subCategory: dessert
 tags:

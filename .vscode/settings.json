@@ -1,5 +1,9 @@
 {
-  "cSpell.words": ["Baghrir", "jeremy", "pinterest", "tailwindcss"],
-  "conventionalCommits.scopes": ["blog", "github"],
-  "cSpell.language": "en,fr"
+	"cSpell.words": ["Baghrir", "jeremy", "pinterest", "tailwindcss"],
+	"conventionalCommits.scopes": ["blog", "github"],
+	"cSpell.language": "en,fr",
+	"sonarlint.connectedMode.project": {
+		"connectionId": "jeremyjousse",
+		"projectKey": "jeremyjousse_website"
+	}
 }

@@ -3,7 +3,7 @@ author: jeremy-jousse
 category: voyages
 categorySub: europe
 coverImageSlug: unsplash:8i9CMDDYuFQ:1649780648332-34626b90da31
-publishedAt: "2025-04-07"
+publishedAt: '2025-04-07'
 summary: On vous partage quelques secrets sur Tignes et Val d'Isère
 title: Bons plans à Tignes
 tags:

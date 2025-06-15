@@ -1,7 +1,7 @@
 ---
 author: jeremy-jousse
 title: Pâte à tarte de Mémé
-publishedAt: "2023-10-29"
+publishedAt: '2023-10-29'
 category: cuisine
 subCategory: dessert
 tags:

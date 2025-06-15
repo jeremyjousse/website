@@ -1,7 +1,7 @@
 ---
 author: jeremy-jousse
 title: Riz vinaigré pour sushi
-publishedAt: "2025-02-19"
+publishedAt: '2025-02-19'
 category: cuisine
 subCategory: plat
 tags:

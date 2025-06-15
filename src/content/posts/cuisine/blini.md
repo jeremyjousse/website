@@ -1,7 +1,7 @@
 ---
 author: jeremy-jousse
 title: Blinis
-publishedAt: "2024-12-21"
+publishedAt: '2024-12-21'
 category: cuisine
 subCategory: aperitif
 tags:

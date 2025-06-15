@@ -1,7 +1,7 @@
 ---
 author: jeremy-jousse
 title: Rochers coco
-publishedAt: "2025-01-17"
+publishedAt: '2025-01-17'
 category: cuisine
 subCategory: dessert
 tags:

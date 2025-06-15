@@ -1,8 +1,8 @@
 ---
 author: jeremy-jousse
 title: Configuration automatique de macOS
-publishedAt: "2023-09-20"
-updatedAt: "2023-10-12"
+publishedAt: '2023-09-20'
+updatedAt: '2023-10-12'
 category: tech
 subCategory: terminal
 tags:

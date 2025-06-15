@@ -1,7 +1,7 @@
 ---
 author: jeremy-jousse
 title: Falafels
-publishedAt: "2024-02-24"
+publishedAt: '2024-02-24'
 category: cuisine
 subCategory: plat
 tags:

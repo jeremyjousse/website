@@ -1,7 +1,7 @@
 ---
 author: leo-paul-jousse
 title: Pancakes
-publishedAt: "2023-11-26"
+publishedAt: '2023-11-26'
 category: cuisine
 subCategory: dessert
 tags:

@@ -1,7 +1,7 @@
 ---
 author: jeremy-jousse
 title: Chiramisu
-publishedAt: "2020-02-20"
+publishedAt: '2020-02-20'
 category: cuisine
 subCategory: dessert
 tags:

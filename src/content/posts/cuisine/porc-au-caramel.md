@@ -1,6 +1,6 @@
 ---
 title: Porc au caramel
-publishedAt: "2025-01-30"
+publishedAt: '2025-01-30'
 category: cuisine
 subCategory: plat
 tags:
