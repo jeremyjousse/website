@@ -26,7 +26,7 @@ sur MacOS.
 
 ## Le résultat
 
-En me replongeant dans les mieux jours, le mot [dotfiles](https://dotfiles.github.io/) est revenu à ma mémoire.
+En me replongeant dans les vieux jours, le mot [dotfiles](https://dotfiles.github.io/) est revenu à ma mémoire.
 
 Les _dotfiles_ en français fichiers points sont des fichiers de configuration situés à la racine du dossier utilisateur
 sur les systèmes unix. Préfixés par des points (dot) ils sont donc masqués dans les explorateurs de fichiers.

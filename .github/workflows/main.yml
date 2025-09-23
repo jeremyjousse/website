@@ -54,17 +54,6 @@ jobs:
           echo "::warning title=Invalid file permissions automatically fixed::$line"
           done
 
-      # - uses: actions/setup-node@v3
-      #   name: Uses pnpm
-      #   with:
-      #     node-version: lts/*
-
-      # - name: Use pnpm
-      #   uses: pnpm/action-setup@v2
-      #   with:
-      #     version: 8
-      #     run_install: false
-
       - name: 🛝 Install Playwright Browsers
         run: pnpm exec playwright install --with-deps
 
@@ -96,14 +85,6 @@ jobs:
             -Dsonar.pullrequest.branch=${{github.event.pull_request.head.ref}}
             -Dsonar.pullrequest.key=${{github.event.pull_request.number}}
             -Dsonar.scm.revision=${{github.event.pull_request.head.ref}}
-
-      # - name: Report test-coverage to DeepSource
-      #   run: |
-      #     # Install the CLI
-      #     curl https://deepsource.io/cli | sh
-
-      #     # Send the report to DeepSource
-      #     ./bin/deepsource report --analyzer test-coverage --key javascript --value-file ./coverage/lcov.info
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
