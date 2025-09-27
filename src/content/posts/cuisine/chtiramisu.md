@@ -1,6 +1,6 @@
 ---
 author: jeremy-jousse
-title: Chiramisu
+title: Chtiramisu
 publishedAt: '2020-02-20'
 category: cuisine
 subCategory: dessert
