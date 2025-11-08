@@ -12,7 +12,7 @@ summary: Des petites douceurs coco à croquer
 
 - 2 blancs d'oeufs
 - 125 g de noix de coco râpée
-- 110 g de sucre en poudre
+- 80 g de sucre en poudre
 - 10 g de sucre vanillé
 
 ## Recette
