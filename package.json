@@ -62,6 +62,6 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"ol": "10.6.1"
+		"ol": "10.7.0"
 	}
 }
