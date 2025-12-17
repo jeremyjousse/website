@@ -3,7 +3,7 @@ name: Build and Deploy to Github Pages
 on:
   pull_request:
     types: [opened, synchronize, reopened]
-    branches: ['main']
+    branches: ["main"]
 
 jobs:
   build:
@@ -15,22 +15,24 @@ jobs:
     timeout-minutes: 60
 
     steps:
-      - uses: actions/checkout@v3
+      - name: 📥 Checkout
+        uses: actions/checkout@v3
         with:
           ref: ${{ github.event.pull_request.head.sha }}
           fetch-depth: 0
 
-      - uses: actions/setup-node@v3
+      - name: 🛠️ Setup Node
+        uses: actions/setup-node@v6
         with:
-          node-version: 18
+          node-version: lts/*
 
-      - uses: pnpm/action-setup@v2
-        name: Install pnpm
+      - name: 🎁 Install pnpm
+        uses: pnpm/action-setup@v4
         with:
-          version: 8
+          version: 10
           run_install: false
 
-      - name: Install node dependencies
+      - name: 🎚️ Install node dependencies
         run: pnpm install
 
       - name: Get installed Playwright version
@@ -45,11 +47,11 @@ jobs:
             ~/.cache/ms-playwright
           key: ${{ runner.os }}-playwright-${{ env.PLAYWRIGHT_VERSION }}
 
-      - name: Install Playwright Browsers
+      - name: 🛝 Install Playwright Browsers
         run: pnpm exec playwright install --with-deps
         if: steps.playwright-cache.outputs.cache-hit != 'true'
 
-      - name: Run Playwright tests
+      - name: 🎯 Run Playwright tests
         run: pnpm exec playwright test
         env:
           PLAYWRIGHT_TEST_BASE_URL: ${{ github.event.deployment_status.target_url }}
@@ -72,7 +74,7 @@ jobs:
           # Send the report to DeepSource
           ./bin/deepsource report --analyzer test-coverage --key javascript --value-file ./coverage/lcov.info
 
-      - name: SonarCloud Scan
+      - name: 🧾 SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Needed to get PR information, if any
@@ -84,14 +86,14 @@ jobs:
             -Dsonar.projectKey=jeremyjousse_website
             -Dsonar.sources=src
             -Dsonar.sources.exclusions="**/*.test.ts",
-            -Dsonar.tests=playwright,vitest
+            -Dsonar.tests=playwright,test-setup
             -Dsonar.javascript.lcov.reportPaths=coverage/lcov.info
             -Dsonar.pullrequest.branch=${{github.event.pull_request.head.ref}}
             -Dsonar.pullrequest.key=${{github.event.pull_request.number}}
             -Dsonar.scm.revision=${{github.event.pull_request.head.ref}}
 
-      - name: 'Report test-coverage to Github'
+      - name: "Report test-coverage to Github"
         if: always() # Also generate the report if tests are failing
         uses: davelosert/vitest-coverage-report-action@v2
         with:
-          json-final-path: './coverage/coverage-final.json'
+          json-final-path: "./coverage/coverage-final.json"

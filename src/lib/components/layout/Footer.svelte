@@ -5,7 +5,7 @@
 	import X from '../svg/X.svelte';
 </script>
 
-<footer class="mx-auto mb-3 mt-3 max-w-5xl">
+<footer class="mx-auto mt-3 mb-3 max-w-5xl">
 	<div class="text-center">Fait avec ❤️ et 💻 par Jérémy Jousse</div>
 	<div class="flex items-center justify-center space-x-1 pt-4">
 		<ul class="m-0 flex list-none gap-4">

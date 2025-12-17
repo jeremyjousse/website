@@ -38,5 +38,5 @@
 </script>
 
 <div>
-	<div id={mapPosition.id} use:setupMap={mapPosition.id} class="h-80" />
+	<div id={mapPosition.id} use:setupMap={mapPosition.id} class="h-80"></div>
 </div>

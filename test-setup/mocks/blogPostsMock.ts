@@ -1,11 +1,11 @@
-import type { MarkdownPostMetadataAndSlug } from '../src/types/markdownPost';
+import type { MarkdownPostMetadataAndSlug } from '../../src/lib/types/markdownPost';
 
 export const onePost: MarkdownPostMetadataAndSlug[] = [
 	{
 		slug: 'post-1',
 		metadata: {
 			category: 'category-1',
-			subCategory: 'sub-category-1',
+			categorySub: 'sub-category-1',
 			tags: ['tag-1', 'tag-2'],
 			title: 'title-1',
 			coverImageSlug: 'title-1',
