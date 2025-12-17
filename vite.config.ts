@@ -13,13 +13,14 @@ export default defineConfig({
 	plugins: [
 		sveltekit(),
 		tsconfigPaths(),
-		istanbul({
-			include: 'src/*',
-			exclude: ['node_modules', 'playwright', 'test-setup'],
-			extension: ['.ts', '.svelte'],
-			requireEnv: false,
-			forceBuildInstrument: true
-		})
+		!process.env.VITEST &&
+			istanbul({
+				include: 'src/*',
+				exclude: ['node_modules', 'playwright', 'test-setup'],
+				extension: ['.ts', '.svelte'],
+				requireEnv: false,
+				forceBuildInstrument: true
+			})
 	],
 
 	server: {
