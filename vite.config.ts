@@ -7,12 +7,15 @@ export default defineConfig({
 	build: {
 		sourcemap: true
 	},
+	resolve: {
+		conditions: ['browser']
+	},
 	plugins: [
 		sveltekit(),
 		tsconfigPaths(),
 		istanbul({
 			include: 'src/*',
-			exclude: ['node_modules', 'playwright', 'vitest'],
+			exclude: ['node_modules', 'playwright', 'test-setup'],
 			extension: ['.ts', '.svelte'],
 			requireEnv: false,
 			forceBuildInstrument: true
@@ -32,7 +35,7 @@ export default defineConfig({
 		include: ['src/**/*.{test,spec}.{js,ts}'],
 		environment: 'jsdom',
 		globals: true,
-		setupFiles: ['./vitest/config/cleanupDom.ts', './vitest/config/registerMatchers.ts'],
+		setupFiles: ['./test-setup/config/cleanupDom.ts', './test-setup/config/registerMatchers.ts'],
 		testTimeout: 10000,
 		restoreMocks: true
 	}

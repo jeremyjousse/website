@@ -13,3 +13,6 @@ package-lock.json
 yarn.lock
 
 .eslintrc.cjs
+
+# Added by Gemini
+playwright/test-results.json

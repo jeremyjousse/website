@@ -29,8 +29,8 @@ const config = {
 		alias: {
 			lib: './src/lib',
 			'lib/*': './src/lib/*',
-			vitest: './vitest',
-			'vitest/*': './vitest/*'
+			'test-setup': './test-setup',
+			'test-setup/*': './test-setup/*'
 		},
 		paths: {
 			base: process.env.NODE_ENV === 'production' ? '/website' : ''

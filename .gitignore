@@ -10,3 +10,10 @@ vite.config.ts.timestamp-*
 /playwright-report/
 /playwright/.cache/
 /coverage
+
+# Added by Gemini
+.env
+.env.test
+.env.local
+*.log
+playwright/test-results.json
