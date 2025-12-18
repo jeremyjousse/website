@@ -1,9 +1,30 @@
 {
-	"cSpell.words": ["Baghrir", "jeremy", "mdsvex", "pinterest", "tailwindcss", "testid"],
-	"conventionalCommits.scopes": ["blog", "github"],
-	"cSpell.language": "en,fr",
-	"sonarlint.connectedMode.project": {
-		"connectionId": "jeremyjousse",
-		"projectKey": "jeremyjousse_website"
-	}
+    "cSpell.words": [
+        "Baghrir",
+        "jeremy",
+        "mdsvex",
+        "pinterest",
+        "tailwindcss",
+        "testid"
+    ],
+    "conventionalCommits.scopes": [
+        "blog",
+        "github"
+    ],
+    "cSpell.language": "en,fr",
+    "sonarlint.connectedMode.project": {
+        "connectionId": "jeremyjousse",
+        "projectKey": "jeremyjousse_website"
+    },
+    "chat.promptFilesRecommendations": {
+        "speckit.constitution": true,
+        "speckit.specify": true,
+        "speckit.plan": true,
+        "speckit.tasks": true,
+        "speckit.implement": true
+    },
+    "chat.tools.terminal.autoApprove": {
+        ".specify/scripts/bash/": true,
+        ".specify/scripts/powershell/": true
+    }
 }
