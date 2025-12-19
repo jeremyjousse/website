@@ -7,14 +7,15 @@
 
 	export let data: PageData;
 
+	let articlesSection: HTMLElement;
+
 	const { paginatedPosts, searchQuery, currentPage, totalPages } = articleStore;
 
 	$: articleStore.setPosts(data.posts);
 
 	function handlePageChange(page: number) {
 		articleStore.setCurrentPage(page);
-		// Scroll to top of articles section
-		document.querySelector('[data-testid="articles-section"]')?.scrollIntoView({
+		articlesSection?.scrollIntoView({
 			behavior: 'smooth',
 			block: 'start'
 		});
@@ -27,7 +28,11 @@
 
 <ArticleSearch />
 
-<section data-testid="articles-section" class="divide-y dark:divide-gray-700">
+<section
+	bind:this={articlesSection}
+	data-testid="articles-section"
+	class="divide-y dark:divide-gray-700"
+>
 	{#each $paginatedPosts as post (post.slug)}
 		<ArticleListing {post} />
 	{:else}
