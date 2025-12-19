@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
 	import { page } from '$app/stores';
+	import { browser } from '$app/environment';
 	import { articleStore } from '../../../stores/articleStore';
 
 	let searchInput: HTMLInputElement;
@@ -62,8 +63,8 @@
 		}
 	}
 
-	$: syncFromUrl($page.url.searchParams.get('q'));
-	$: updateUrl($searchQuery);
+	$: if (browser) syncFromUrl($page.url.searchParams.get('q'));
+	$: if (browser) updateUrl($searchQuery);
 </script>
 
 <svelte:window on:keydown={handleKeydown} />
