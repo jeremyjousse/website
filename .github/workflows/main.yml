@@ -20,9 +20,6 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 60
 
-    env:
-      DEEPSOURCE_DSN: ${{ secrets.DEEPSOURCE_DSN }}
-
     steps:
       - name: 📥 Checkout
         uses: actions/checkout@v5
@@ -79,12 +76,9 @@ jobs:
             -Dsonar.organization=jeremyjousse
             -Dsonar.projectKey=jeremyjousse_website
             -Dsonar.sources=src
-            -Dsonar.sources.exclusions="**/*.test.ts",
+            -Dsonar.exclusions="**/*.test.ts"
             -Dsonar.tests=playwright,test-setup
             -Dsonar.javascript.lcov.reportPaths=coverage/lcov.info
-            -Dsonar.pullrequest.branch=${{github.event.pull_request.head.ref}}
-            -Dsonar.pullrequest.key=${{github.event.pull_request.number}}
-            -Dsonar.scm.revision=${{github.event.pull_request.head.ref}}
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
