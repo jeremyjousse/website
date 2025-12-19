@@ -57,7 +57,7 @@
 		"typescript-svelte-plugin": "^0.3.50",
 		"vite": "7.3.0",
 		"vite-plugin-istanbul": "7.2.1",
-		"vite-tsconfig-paths": "6.0.2",
+		"vite-tsconfig-paths": "6.0.3",
 		"vitest": "4.0.16",
 		"vitest-dom": "^0.1.1"
 	},
