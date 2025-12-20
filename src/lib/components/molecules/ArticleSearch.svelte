@@ -2,13 +2,15 @@
 	import { goto } from '$app/navigation';
 	import { page } from '$app/stores';
 	import { browser } from '$app/environment';
-	import { articleStore } from '$lib/stores/articleStore.svelte';
+	import { getArticleState } from '$lib/components/context/article.svelte';
 
 	let searchInput = $state<HTMLInputElement>();
 	let mobileInput = $state<HTMLInputElement>();
 	let isSearchActive = $state(false);
 	let timer: ReturnType<typeof setTimeout> | undefined;
 	let lastSyncedQuery: string | null = null;
+
+	const articleState = getArticleState();
 
 	function updateUrl(query: string) {
 		clearTimeout(timer);
@@ -35,7 +37,7 @@
 
 	function closeSearch() {
 		isSearchActive = false;
-		articleStore.searchQuery = '';
+		articleState.searchQuery = '';
 	}
 
 	function handleKeydown(event: KeyboardEvent) {
@@ -51,9 +53,9 @@
 		if (event.key === 'Escape') {
 			if (isSearchActive) {
 				isSearchActive = false;
-				articleStore.searchQuery = '';
-			} else if (articleStore.searchQuery) {
-				articleStore.searchQuery = '';
+				articleState.searchQuery = '';
+			} else if (articleState.searchQuery) {
+				articleState.searchQuery = '';
 				searchInput?.blur();
 			}
 		}
@@ -64,8 +66,8 @@
 		if (val === lastSyncedQuery) return;
 		lastSyncedQuery = val;
 
-		if (val !== articleStore.searchQuery) {
-			articleStore.searchQuery = val;
+		if (val !== articleState.searchQuery) {
+			articleState.searchQuery = val;
 		}
 	}
 
@@ -74,7 +76,7 @@
 	});
 
 	$effect(() => {
-		if (browser) updateUrl(articleStore.searchQuery);
+		if (browser) updateUrl(articleState.searchQuery);
 		return () => {
 			if (timer) clearTimeout(timer);
 		};
@@ -87,7 +89,7 @@
 	<input
 		bind:this={searchInput}
 		type="text"
-		bind:value={articleStore.searchQuery}
+		bind:value={articleState.searchQuery}
 		placeholder="Search articles..."
 		class="hidden rounded-lg border border-gray-300 px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:outline-none md:block dark:border-gray-700 dark:bg-gray-800 dark:text-white"
 		aria-label="Search articles"
@@ -119,7 +121,7 @@
 				<input
 					bind:this={mobileInput}
 					type="text"
-					bind:value={articleStore.searchQuery}
+					bind:value={articleState.searchQuery}
 					class="flex-1 rounded-lg border border-gray-700 bg-gray-800 px-4 py-2 text-white focus:ring-2 focus:ring-blue-500 focus:outline-none"
 					placeholder="Search articles..."
 					aria-label="Search articles"

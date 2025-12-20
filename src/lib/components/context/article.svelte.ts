@@ -1,8 +1,12 @@
-import { filterArticles } from '$lib/utils/search';
+import { getContext, setContext } from 'svelte';
+
 import type { MarkdownPostMetadataAndSlug } from '$lib/types/markdownPost';
 import { PAGINATION_CONFIG } from '$lib/config/pagination';
+import { filterArticles } from '$lib/utils/search';
 
-export class ArticleStore {
+const ARTICLE_KEY = Symbol('ARTICLE');
+
+export class ArticleState {
 	private _posts = $state<MarkdownPostMetadataAndSlug[]>([]);
 	private _searchQuery = $state('');
 	private _itemsPerPage = $state<number>(PAGINATION_CONFIG.ITEMS_PER_PAGE);
@@ -51,4 +55,10 @@ export class ArticleStore {
 	totalPages = $derived(Math.ceil(this.filteredPosts.length / this.itemsPerPage));
 }
 
-export const articleStore = new ArticleStore();
+export function setArticleState() {
+	return setContext(ARTICLE_KEY, new ArticleState());
+}
+
+export function getArticleState() {
+	return getContext<ArticleState>(ARTICLE_KEY);
+}

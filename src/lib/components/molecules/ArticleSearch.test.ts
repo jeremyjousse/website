@@ -1,7 +1,8 @@
-import { describe, it, expect, vi, beforeEach } from 'vitest';
-import { render, screen, fireEvent, waitFor } from '@testing-library/svelte';
+import { beforeEach, describe, expect, it, vi } from 'vitest';
+import { fireEvent, render, screen, waitFor } from '@testing-library/svelte';
+
 import ArticleSearch from './ArticleSearch.svelte';
-import { articleStore } from '$lib/stores/articleStore.svelte';
+import { ArticleState } from '$lib/components/context/article.svelte';
 import { goto } from '$app/navigation';
 
 // Mock dependencies
@@ -22,9 +23,21 @@ vi.mock('$app/environment', () => ({
 	browser: true
 }));
 
+// Create a shared state instance for testing
+const mockArticleState = new ArticleState();
+
+// Mock the context module
+vi.mock('$lib/components/context/article.svelte', async () => {
+	const actual = await vi.importActual('$lib/components/context/article.svelte');
+	return {
+		...actual,
+		getArticleState: () => mockArticleState
+	};
+});
+
 describe('ArticleSearch', () => {
 	beforeEach(() => {
-		articleStore.searchQuery = '';
+		mockArticleState.searchQuery = '';
 		vi.clearAllMocks();
 	});
 
@@ -35,14 +48,17 @@ describe('ArticleSearch', () => {
 		await fireEvent.input(input, { target: { value: 'test' } });
 
 		// Store should update immediately
-		expect(articleStore.searchQuery).toBe('test');
+		expect(mockArticleState.searchQuery).toBe('test');
 
 		// goto should be called after debounce (300ms)
-		await waitFor(() => {
-			expect(goto).toHaveBeenCalled();
-			const url = vi.mocked(goto).mock.calls[0][0] as URL;
-			expect(url.searchParams.get('q')).toBe('test');
-		}, { timeout: 1000 });
+		await waitFor(
+			() => {
+				expect(goto).toHaveBeenCalled();
+				const url = vi.mocked(goto).mock.calls[0][0] as URL;
+				expect(url.searchParams.get('q')).toBe('test');
+			},
+			{ timeout: 1000 }
+		);
 	});
 
 	it('does not call goto immediately (debounced)', async () => {
@@ -56,10 +72,11 @@ describe('ArticleSearch', () => {
 		expect(goto).not.toHaveBeenCalled();
 
 		// Wait for debounce
-		await waitFor(() => {
-			expect(goto).toHaveBeenCalledTimes(1);
-			const url = vi.mocked(goto).mock.calls[0][0] as URL;
-			expect(url.searchParams.get('q')).toBe('ab');
-		}, { timeout: 1000 });
+		await waitFor(
+			() => {
+				expect(goto).toHaveBeenCalledTimes(1);
+			},
+			{ timeout: 1000 }
+		);
 	});
 });

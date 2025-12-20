@@ -1,9 +1,10 @@
 import { describe, expect, it } from 'vitest';
-import { ArticleStore } from './articleStore.svelte';
+
+import { ArticleState } from './article.svelte';
 import type { MarkdownPostMetadataAndSlug } from '$lib/types/markdownPost';
 import { PAGINATION_CONFIG } from '$lib/config/pagination';
 
-describe('ArticleStore', () => {
+describe('ArticleState', () => {
 	const mockPosts: MarkdownPostMetadataAndSlug[] = [
 		{
 			slug: 'post-1',
@@ -32,7 +33,7 @@ describe('ArticleStore', () => {
 	];
 
 	it('should initialize with defaults', () => {
-		const store = new ArticleStore();
+		const store = new ArticleState();
 		expect(store.posts).toEqual([]);
 		expect(store.searchQuery).toBe('');
 		expect(store.currentPage).toBe(1);
@@ -40,7 +41,7 @@ describe('ArticleStore', () => {
 	});
 
 	it('should filter posts based on search query', () => {
-		const store = new ArticleStore();
+		const store = new ArticleState();
 		store.posts = mockPosts;
 		store.searchQuery = 'svelte';
 		expect(store.filteredPosts).toHaveLength(1);
@@ -48,7 +49,7 @@ describe('ArticleStore', () => {
 	});
 
 	it('should update filtered posts when posts change', () => {
-		const store = new ArticleStore();
+		const store = new ArticleState();
 		expect(store.filteredPosts).toHaveLength(0);
 
 		store.posts = mockPosts;
@@ -59,7 +60,7 @@ describe('ArticleStore', () => {
 	});
 
 	it('should handle pagination', () => {
-		const store = new ArticleStore();
+		const store = new ArticleState();
 		store.posts = mockPosts;
 		store.itemsPerPage = 1;
 
@@ -72,7 +73,7 @@ describe('ArticleStore', () => {
 	});
 
 	it('should reset to first page when search query changes', () => {
-		const store = new ArticleStore();
+		const store = new ArticleState();
 		store.posts = mockPosts;
 		store.itemsPerPage = 1;
 		store.currentPage = 2;
@@ -83,7 +84,7 @@ describe('ArticleStore', () => {
 	});
 
 	it('should reset to first page when itemsPerPage changes', () => {
-		const store = new ArticleStore();
+		const store = new ArticleState();
 		store.posts = mockPosts;
 		store.itemsPerPage = 1;
 		store.currentPage = 2;
@@ -93,7 +94,7 @@ describe('ArticleStore', () => {
 	});
 
 	it('should reset to first page when posts change', () => {
-		const store = new ArticleStore();
+		const store = new ArticleState();
 		store.posts = mockPosts;
 		store.itemsPerPage = 1;
 		store.currentPage = 2;

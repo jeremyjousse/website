@@ -1,9 +1,9 @@
 import { describe, expect, it, vi } from 'vitest';
 import { render, screen } from '@testing-library/svelte';
 
+import { ArticleState } from '$lib/components/context/article.svelte';
 import type { MarkdownPostMetadataAndSlug } from '$lib/types/markdownPost';
 import Page from './+page.svelte';
-import { articleStore } from '$lib/stores/articleStore.svelte';
 
 vi.mock('$app/paths', () => ({
 	base: ''
@@ -28,6 +28,17 @@ vi.mock('$app/navigation', () => ({
 vi.mock('$app/environment', () => ({
 	browser: true
 }));
+
+// Mock the context module
+const mockArticleState = new ArticleState();
+vi.mock('$lib/components/context/article.svelte', async () => {
+	const actual = await vi.importActual('$lib/components/context/article.svelte');
+	return {
+		...actual,
+		getArticleState: () => mockArticleState,
+		setArticleState: () => mockArticleState
+	};
+});
 
 const mockPosts: MarkdownPostMetadataAndSlug[] = Array.from({ length: 15 }, (_, i) => ({
 	slug: `post-${i}`,
@@ -63,7 +74,7 @@ describe('Category Page', () => {
 
 		// Since we mocked ArticleListing, we might not see "Post 0" text directly if the mock doesn't render props.
 		// However, we can check if the store was updated.
-		expect(articleStore.posts).toEqual(mockPosts);
+		expect(mockArticleState.posts).toEqual(mockPosts);
 
 		// Check pagination (should have two: top and bottom)
 		const paginationElements = screen.getAllByLabelText('Pagination');
