@@ -7,10 +7,15 @@
 		"Github",
 		"jeremy",
 		"mdsvex",
+		"onclick",
 		"pinterest",
+		"prerender",
+		"Prerendering",
 		"pullrequest",
+		"sveltejs",
 		"tailwindcss",
-		"testid"
+		"testid",
+		"vitest"
 	],
 	"conventionalCommits.scopes": ["blog", "github"],
 	"cSpell.language": "en,fr",
