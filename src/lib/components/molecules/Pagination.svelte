@@ -62,7 +62,7 @@
 
 {#if totalPages > 1}
 	<nav
-		class="flex items-center justify-center gap-2 py-8"
+		class="flex items-center justify-center gap-2 py-4"
 		aria-label="Pagination"
 		data-testid="pagination"
 	>
