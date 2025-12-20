@@ -13,6 +13,9 @@
 
 	let topPaginationElement: HTMLElement;
 
+	// Initialize the store immediately so it renders during SSR/Prerendering
+	articleStore.posts = posts;
+
 	$effect(() => {
 		articleStore.posts = posts;
 	});
@@ -37,15 +40,13 @@
 	/>
 </div>
 
-<section
-	data-testid="articles-section"
-	class="divide-y dark:divide-gray-700"
->
+<section data-testid="articles-section" class="divide-y dark:divide-gray-700">
 	{#each articleStore.paginatedPosts as post (post.slug)}
 		<ArticleListing {post} />
 	{:else}
 		<div class="p-4 text-center text-gray-500 dark:text-gray-400">
-			No articles found matching "{articleStore.searchQuery}"{#if categoryName} in {categoryName}{/if}.
+			No articles found matching "{articleStore.searchQuery}"{#if categoryName}
+				in {categoryName}{/if}.
 		</div>
 	{/each}
 </section>
