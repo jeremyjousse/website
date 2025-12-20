@@ -7,7 +7,7 @@
 	let searchInput = $state<HTMLInputElement>();
 	let mobileInput = $state<HTMLInputElement>();
 	let isSearchActive = $state(false);
-	let timer: ReturnType<typeof setTimeout>;
+	let timer: ReturnType<typeof setTimeout> | undefined;
 	let lastSyncedQuery: string | null = null;
 
 	function updateUrl(query: string) {
@@ -75,7 +75,9 @@
 
 	$effect(() => {
 		if (browser) updateUrl(articleStore.searchQuery);
-		return () => clearTimeout(timer);
+		return () => {
+			if (timer) clearTimeout(timer);
+		};
 	});
 </script>
 
