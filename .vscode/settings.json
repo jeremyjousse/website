@@ -15,6 +15,7 @@
 		"sveltejs",
 		"tailwindcss",
 		"testid",
+		"unsplash",
 		"vitest"
 	],
 	"conventionalCommits.scopes": ["blog", "github"],

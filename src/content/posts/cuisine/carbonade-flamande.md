@@ -19,7 +19,7 @@ summary: Le plat du Nord par excellence, à servir avec de bonnes frites
 - 1 cuillères à soupe de vinaigre balsamique
 - 1 kg de le paleron, basses côtes, jumeau ou même de la joue de boeuf
 - 25 cl de bière du Nord ou de Belgique
-- 5 à 6 tranche de pain d'épice
+- 5 à 6 tranches de pain d'épice
 - 5 à 6 cuillères à soupe de moutarde à l'ancienne
 
 ## Recette
