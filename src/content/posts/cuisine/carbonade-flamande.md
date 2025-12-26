@@ -44,4 +44,4 @@ de cacher la viande.
 
 ### Étape 5
 
-Fermez la cocotte et cuire 90 minutes à feu doux.
+Fermez la cocotte et cuire 60 minutes à feu doux.

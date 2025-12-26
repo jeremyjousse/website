@@ -22,7 +22,7 @@ summary: Ideal pour les cadeaux de noël
 
 ### Glaçage royale
 
-- 200 g de sucre glace
+- 100 g de sucre glace
 - 1 blanc d'œuf
 - 1 cuillère à soupe de jus de citron
 
@@ -56,7 +56,7 @@ Former des étoiles à l'emporte pièce et les déposer sur la plaque.
 
 ### Étape 7
 
-Cuire pendant 20 minutes.
+Cuire pendant 8 minutes et vérifier la cuisson.
 
 ### Étape 8
 
