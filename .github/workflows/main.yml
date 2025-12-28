@@ -2,7 +2,13 @@ name: Build, test and Deploy to Github Pages
 
 on:
   push:
-    branches: ["main"]
+    branches:
+      - main
+    paths:
+      - "src/**"
+      - "static/**"
+      - "package.json"
+      - "pnpm-lock.yaml"
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
