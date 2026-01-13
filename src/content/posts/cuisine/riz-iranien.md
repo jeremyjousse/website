@@ -14,16 +14,16 @@ summary: Un riz savoureux et parfumé, parfait pour accompagner un plat oriental
 
 ## Ingrédients
 
-350 g de riz basmati
-1 oignon
-40 g de pignon de pin
-50 g de beurre
-20 g d’amande effilée
-6 g de cumin
-5 g de coriandre en poudre
-80 ml de bouillon de légume
-1 branche de coriandre fraîche
-5 cl d’huile d’olive
+- 350 g de riz basmati
+- 1 oignon
+- 40 g de pignon de pin
+- 50 g de beurre
+- 20 g d’amande effilée
+- 6 g de cumin
+- 5 g de coriandre en poudre
+- 80 ml de bouillon de légume
+- 1 branche de coriandre fraîche
+- 5 cl d’huile d’olive
 
 ## Recette
 
