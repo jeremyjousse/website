@@ -51,6 +51,9 @@ jobs:
       - name: 🪚 pnpm run build
         run: pnpm run build
 
+      - name: 🎛️ create 404 fake page
+        run: cp ./build/index.html ./build/404.html
+
       - name: 💉 Fix permissions
         run: |
           chmod -c -R +rX "_site/" | while read line; do
