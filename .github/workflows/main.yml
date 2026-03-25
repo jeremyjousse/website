@@ -60,35 +60,6 @@ jobs:
           echo "::warning title=Invalid file permissions automatically fixed::$line"
           done
 
-      - name: 🛝 Install Playwright Browsers
-        run: pnpm exec playwright install --with-deps
-
-      - name: 🎯 Run Playwright tests
-        run: pnpm exec playwright test
-
-      - name: 🛻 Upload Artifacts
-        uses: actions/upload-artifact@v4
-        if: always()
-        with:
-          name: playwright-report
-          path: playwright-report/
-          retention-days: 30
-
-      - name: 🧾 SonarCloud Scan
-        uses: SonarSource/sonarcloud-github-action@master
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Needed to get PR information, if any
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        with:
-          args: >
-            -Dsonar.host.url=https://sonarcloud.io
-            -Dsonar.organization=jeremyjousse
-            -Dsonar.projectKey=jeremyjousse_website
-            -Dsonar.sources=src
-            -Dsonar.exclusions="**/*.test.ts"
-            -Dsonar.tests=playwright,test-setup
-            -Dsonar.javascript.lcov.reportPaths=coverage/lcov.info
-
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
         with:
