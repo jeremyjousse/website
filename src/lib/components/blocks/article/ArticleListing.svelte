@@ -2,7 +2,7 @@
 	import { base } from '$app/paths';
 	import type { MarkdownPostMetadataAndSlug } from '$lib/types/markdownPost';
 	import { formatPublishedAt } from '$lib/utils/dates';
-	import BlogPostCoverImage from 'lib/components/atoms/BlogPostCoverImage.svelte';
+	import BlogPostCoverImage from '$lib/components/atoms/BlogPostCoverImage.svelte';
 
 	export let post: MarkdownPostMetadataAndSlug;
 

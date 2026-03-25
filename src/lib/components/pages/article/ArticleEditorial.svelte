@@ -3,7 +3,7 @@
 	import AuthorInfo from '$lib/components/atoms/AuthorInfo.svelte';
 	import type { MarkdownPost } from '$lib/types/markdownPost';
 	import { formatPublishedAt } from '$lib/utils/dates';
-	import BlogPostCoverImage from 'lib/components/atoms/BlogPostCoverImage.svelte';
+	import BlogPostCoverImage from '$lib/components/atoms/BlogPostCoverImage.svelte';
 
 	export let metadata: MarkdownPost['metadata'];
 </script>
