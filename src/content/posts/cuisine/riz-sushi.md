@@ -14,7 +14,7 @@ summary: Le riz typique japonais pour sushi, poke bowl ou Katsukarē
 ## Ingrédients
 
 - 4 verres de riz rond Japonica
-- 4 verres d'eau
+- 5 verres d'eau
 - 1/2 verre de vinaigre de riz
 - 4 cuillères à soupe de sucre
 - 1,5 cuillère à café de sel
