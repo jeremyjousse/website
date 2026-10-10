@@ -5,10 +5,10 @@ on:
     branches:
       - main
     paths:
-      - "src/**"
-      - "static/**"
-      - "package.json"
-      - "pnpm-lock.yaml"
+      - 'src/**'
+      - 'static/**'
+      - 'package.json'
+      - 'pnpm-lock.yaml'
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
@@ -18,7 +18,7 @@ permissions:
 
 # Allow one concurrent deployment
 concurrency:
-  group: "pages"
+  group: 'pages'
   cancel-in-progress: true
 
 jobs:
@@ -28,19 +28,19 @@ jobs:
 
     steps:
       - name: 📥 Checkout
-        uses: actions/checkout@v5
+        uses: actions/checkout@v7
 
       - name: 📄 Configure Pages
-        uses: actions/configure-pages@v5
+        uses: actions/configure-pages@v6
         id: pages
 
       - name: 🛠️ Setup Node
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@v7
         with:
           node-version: lts/*
 
       - name: 🎁 Install pnpm
-        uses: pnpm/action-setup@v4
+        uses: pnpm/action-setup@v6
         with:
           version: 10
           run_install: false
@@ -61,7 +61,7 @@ jobs:
           done
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v4
+        uses: actions/upload-pages-artifact@v5
         with:
           path: ./build
 
@@ -73,5 +73,5 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: 🚀 Deploy page
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
         id: deployment
