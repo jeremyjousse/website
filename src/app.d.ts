@@ -4,7 +4,6 @@ declare global {
 	type Gtag = (...args: unknown[]) => void;
 	var gtag: Gtag;
 
-	}
 	namespace App {
 		// interface Error {}
 		interface Locals {

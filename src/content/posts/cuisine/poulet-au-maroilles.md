@@ -5,9 +5,9 @@ publishedAt: '2025-12-17'
 category: cuisine
 subCategory: plat
 tags:
-    - plat
-    - nord
-    - fromage
+  - plat
+  - nord
+  - fromage
 coverImageSlug: https://img.cuisineaz.com/660x495/2023/04/12/i192696-blancs-de-poulet-et-sauce-au-maroilles.webp
 summary: Un grand classique du Nord, généreux et parfumé au fromage de caractère
 ---

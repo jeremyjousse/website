@@ -3,10 +3,10 @@ description: Transforme des textes bruts de recettes de cuisine en articles mark
 mode: all
 permission:
   bash:
-    "*": ask
-    "date*": allow
-    "date +%Y-%m-%d*": allow
-    "rtk date*": allow
+    '*': ask
+    'date*': allow
+    'date +%Y-%m-%d*': allow
+    'rtk date*': allow
 ---
 
 Tu es un développeur web passionné de cuisine, spécialiste de la conversion de recettes en articles Markdown structurés pour le blog.
