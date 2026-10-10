@@ -5,9 +5,9 @@ publishedAt: '2025-12-20'
 category: cuisine
 subCategory: dessert
 tags:
-    - dessert
-    - goûter
-    - anti-gaspillage
+  - dessert
+  - goûter
+  - anti-gaspillage
 coverImageSlug: unsplash:u00NnpVinYA:1585461276010-aff0f3dcd48f
 summary: Une recette simple et réconfortante pour utiliser du vieux pain.
 ---

@@ -3,7 +3,7 @@ name: Build and Deploy to Github Pages
 on:
   pull_request:
     types: [opened, synchronize, reopened]
-    branches: ["main"]
+    branches: ['main']
 
 jobs:
   build:
@@ -14,18 +14,18 @@ jobs:
 
     steps:
       - name: 📥 Checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
         with:
           ref: ${{ github.event.pull_request.head.sha }}
           fetch-depth: 0
 
       - name: 🛠️ Setup Node
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@v7
         with:
           node-version: lts/*
 
       - name: 🎁 Install pnpm
-        uses: pnpm/action-setup@v4
+        uses: pnpm/action-setup@v6
         with:
           version: 10
           run_install: false
@@ -35,10 +35,10 @@ jobs:
 
       - name: Get installed Playwright version
         id: playwright-version
-        run: echo "PLAYWRIGHT_VERSION=$(node -e "console.log(require('./package-lock.json').dependencies['@playwright/test'].version)")" >> $GITHUB_ENV
+        run: echo "PLAYWRIGHT_VERSION=$(node -e "console.log(require('@playwright/test/package.json').version)")" >> $GITHUB_ENV
 
       - name: Cache playwright binaries
-        uses: actions/cache@v3
+        uses: actions/cache@v6
         id: playwright-cache
         with:
           path: |
@@ -57,26 +57,8 @@ jobs:
       - name: Run unit tests and coverage
         run: pnpm run test:coverage
 
-      - name: 🧾 SonarCloud Scan
-        uses: SonarSource/sonarcloud-github-action@master
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Needed to get PR information, if any
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        with:
-          args: >
-            -Dsonar.host.url=https://sonarcloud.io
-            -Dsonar.organization=jeremyjousse
-            -Dsonar.projectKey=jeremyjousse_website
-            -Dsonar.sources=src
-            -Dsonar.exclusions="**/*.test.ts"
-            -Dsonar.tests=playwright,test-setup
-            -Dsonar.javascript.lcov.reportPaths=coverage/lcov.info
-            -Dsonar.pullrequest.branch=${{github.event.pull_request.head.ref}}
-            -Dsonar.pullrequest.key=${{github.event.pull_request.number}}
-            -Dsonar.scm.revision=${{github.event.pull_request.head.ref}}
-
-      - name: "Report test-coverage to Github"
+      - name: 'Report test-coverage to Github'
         if: always() # Also generate the report if tests are failing
         uses: davelosert/vitest-coverage-report-action@v2
         with:
-          json-final-path: "./coverage/coverage-final.json"
+          json-final-path: './coverage/coverage-final.json'

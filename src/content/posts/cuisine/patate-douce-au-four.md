@@ -5,8 +5,8 @@ publishedAt: '2025-12-10'
 category: cuisine
 subCategory: accompagnement
 tags:
-    - légume
-    - rôti
+  - légume
+  - rôti
 coverImageSlug: unsplash:nKjo8bOd6Es:1603208127327-4ec6a65095b1
 summary: Une recette simple pour obtenir des patates douces fondantes et épicées.
 ---

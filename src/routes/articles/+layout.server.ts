@@ -11,7 +11,9 @@ export const load = async ({ fetch }) => {
 		}
 		const articles = (await response.json()) as MarkdownPost[];
 
-		const categories = Array.from(new Set(articles.flatMap((article) => article.metadata.category)));
+		const categories = Array.from(
+			new Set(articles.flatMap((article) => article.metadata.category))
+		);
 
 		return { categories };
 	} catch (e) {

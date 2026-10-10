@@ -5,8 +5,8 @@ publishedAt: '2025-12-31'
 category: cuisine
 subCategory: boisson
 tags:
-    - cocktail
-    - fete
+  - cocktail
+  - fete
 coverImageSlug: pexels:35479047
 summary: Le fameux punch au fruits de Yves et Marie-Claire datant de 1997
 ---

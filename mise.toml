@@ -1,0 +1,64 @@
+[tools]
+node = "lts"
+
+# ---------------------------------------------------------------------------
+# Code quality & formatting
+# ---------------------------------------------------------------------------
+
+[tasks.lint]
+description = "Lint code with oxlint"
+run = "pnpm oxlint"
+
+[tasks.format]
+description = "Format code with oxfmt"
+run = "pnpm oxfmt"
+
+[tasks."format:check"]
+description = "Check code formatting with oxfmt"
+run = "pnpm oxfmt --check"
+
+[tasks.check]
+description = "Type-check code with svelte-check"
+alias = "typecheck"
+run = "pnpm check"
+
+# ---------------------------------------------------------------------------
+# Tests
+# ---------------------------------------------------------------------------
+
+[tasks.test]
+description = "Run unit tests with vitest"
+run = "pnpm vitest run"
+
+[tasks."test:coverage"]
+description = "Run unit tests with coverage"
+run = "pnpm test:coverage"
+
+[tasks."test:e2e"]
+description = "Run end-to-end tests with Playwright"
+run = "pnpm test:e2e"
+
+# ---------------------------------------------------------------------------
+# Build & Development
+# ---------------------------------------------------------------------------
+
+[tasks.dev]
+description = "Start development server"
+run = "pnpm dev"
+
+[tasks.build]
+description = "Build website for production"
+wait_for = ["check"]
+run = "pnpm build"
+
+[tasks.preview]
+description = "Preview production build"
+run = "pnpm preview"
+
+# ---------------------------------------------------------------------------
+# SDLC Verification Suite
+# ---------------------------------------------------------------------------
+
+[tasks.verify]
+description = "Run full quality verification suite (format check, lint, check, test, build)"
+depends = ["format:check", "lint", "check", "test", "build"]
