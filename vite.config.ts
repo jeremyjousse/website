@@ -1,3 +1,4 @@
+import { fileURLToPath } from 'node:url';
 import { defineConfig } from 'vitest/config';
 import istanbul from 'vite-plugin-istanbul';
 import { sveltekit } from '@sveltejs/kit/vite';
@@ -8,7 +9,10 @@ export default defineConfig({
         sourcemap: true
     },
     resolve: {
-        conditions: ['browser']
+        conditions: ['browser'],
+        alias: {
+            'test-setup': fileURLToPath(new URL('./test-setup', import.meta.url))
+        }
     },
     plugins: [
         sveltekit(),
@@ -34,9 +38,6 @@ export default defineConfig({
             reportsDirectory: './coverage'
         },
         include: ['src/**/*.{test,spec}.{js,ts}'],
-        alias: {
-            'test-setup': './test-setup'
-        },
         environment: 'jsdom',
         globals: true,
         setupFiles: ['./test-setup/config/cleanupDom.ts', './test-setup/config/registerMatchers.ts'],
