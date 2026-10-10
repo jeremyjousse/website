@@ -57,24 +57,6 @@ jobs:
       - name: Run unit tests and coverage
         run: pnpm run test:coverage
 
-      - name: 🧾 SonarCloud Scan
-        uses: SonarSource/sonarqube-scan-action@v8
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Needed to get PR information, if any
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        with:
-          args: >
-            -Dsonar.host.url=https://sonarcloud.io
-            -Dsonar.organization=jeremyjousse
-            -Dsonar.projectKey=jeremyjousse_website
-            -Dsonar.sources=src
-            -Dsonar.exclusions=**/*.test.ts
-            -Dsonar.tests=playwright,test-setup
-            -Dsonar.javascript.lcov.reportPaths=coverage/lcov.info
-            -Dsonar.pullrequest.branch=${{github.event.pull_request.head.ref}}
-            -Dsonar.pullrequest.key=${{github.event.pull_request.number}}
-            -Dsonar.scm.revision=${{github.event.pull_request.head.ref}}
-
       - name: 'Report test-coverage to Github'
         if: always() # Also generate the report if tests are failing
         uses: davelosert/vitest-coverage-report-action@v2
