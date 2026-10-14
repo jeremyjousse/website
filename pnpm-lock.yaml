@@ -51,8 +51,8 @@ importers:
         specifier: ^4.1.11
         version: 4.1.11(supports-color@8.1.1)(vitest@4.1.1(@types/node@25.9.9)(jsdom@29.0.1)(vite@8.3.4(@types/node@25.9.9)(esbuild@0.27.2)(jiti@2.7.0)(yaml@2.8.0)))
       dotenv:
-        specifier: 17.3.1
-        version: 17.3.1
+        specifier: 18.0.7
+        version: 18.0.7
       jsdom:
         specifier: 29.0.1
         version: 29.0.1
@@ -1804,9 +1804,10 @@ packages:
     resolution: {integrity: sha512-QM8q3zDe58hqUqjraQOmzZ1LIH9SWQJTlEKCH4kJ2oQvLZk7RbQXvtDM2XEq3fwkV9CCvvH4LA0AV+ogFsBM2Q==}
     engines: {node: '>=8'}
 
-  dotenv@17.3.1:
-    resolution: {integrity: sha512-IO8C/dzEb6O3F9/twg6ZLXz164a2fhTnEWb95H23Dm4OuN+92NmEAlTrupP9VW6Jm3sO26tQlqyvyi4CsnY9GA==}
+  dotenv@18.0.7:
+    resolution: {integrity: sha512-QEvMEF8ca3GNZJJnAbOgxpj5ULhBvnMcURp+XKrtvqFNPgjBvYoswQ0Jl2cO7JzCjxZjJhr9ZuIEhlrRxMft/Q==}
     engines: {node: '>=12'}
+    hasBin: true
 
   duplexer2@0.1.4:
     resolution: {integrity: sha512-asLFVfWWtJ90ZyOUHMqk7/S2w2guQKxUI2itj3d92ADHhxUSbCMGi1f1cBcJ7xM1To+pE/Khbwo1yuNbMEPKeA==}
@@ -5581,7 +5582,7 @@ snapshots:
     dependencies:
       is-obj: 2.0.0
 
-  dotenv@17.3.1: {}
+  dotenv@18.0.7: {}
 
   duplexer2@0.1.4:
     dependencies:
