@@ -1,18 +1,14 @@
 import type { Load } from '@sveltejs/kit';
-import type { MarkdownPostMetadataAndSlug } from '$lib/types/markdownPost';
-import { base } from '$app/paths';
+import type { MarkdownPostMetadataAndSlug } from '#lib/types/markdownPost.js';
+import { resolve } from '$app/paths';
 
 export const load: Load = async ({ fetch, params }) => {
 	const { category } = params;
-	const response = await fetch(`${base}/api/posts`);
+	const response = await fetch(resolve(`api/posts`));
 	const allPosts = await response.json();
-
 	const posts: MarkdownPostMetadataAndSlug[] = allPosts.filter(
 		(post: MarkdownPostMetadataAndSlug) => post.metadata.category === category
 	);
 
-	return {
-		category,
-		posts
-	};
+	return { category, posts };
 };

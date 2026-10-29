@@ -1,6 +1,6 @@
 <script>
-	import IconLink from '$lib/components/atoms/IconLink.svelte';
-	import Github from '$lib/components/svg/Github.svelte';
+	import IconLink from '#lib/components/atoms/IconLink.svelte';
+	import Github from '#lib/components/svg/Github.svelte';
 	import Linkedin from '../svg/Linkedin.svelte';
 	import X from '../svg/X.svelte';
 </script>

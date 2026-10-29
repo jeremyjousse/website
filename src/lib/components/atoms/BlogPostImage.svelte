@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { BlogPostImageInfo } from '$lib/types/blogPostImageInfo';
+	import type { BlogPostImageInfo } from '#lib/types/blogPostImageInfo.js';
 
 	export let image: BlogPostImageInfo;
 

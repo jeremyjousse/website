@@ -1,9 +1,9 @@
 <script lang="ts">
-	import { base } from '$app/paths';
-	import AuthorInfo from '$lib/components/atoms/AuthorInfo.svelte';
-	import type { MarkdownPost } from '$lib/types/markdownPost';
-	import { formatPublishedAt } from '$lib/utils/dates';
-	import BlogPostCoverImage from '$lib/components/atoms/BlogPostCoverImage.svelte';
+	import { resolve } from '$app/paths';
+	import AuthorInfo from '#lib/components/atoms/AuthorInfo.svelte';
+	import type { MarkdownPost } from '#lib/types/markdownPost.js';
+	import { formatPublishedAt } from '#lib/utils/dates.js';
+	import BlogPostCoverImage from '#lib/components/atoms/BlogPostCoverImage.svelte';
 
 	export let metadata: MarkdownPost['metadata'];
 </script>
@@ -33,9 +33,7 @@
 						{#if metadata.category}
 							<div>
 								<span>Rubrique :</span>
-								<a href="{base}/articles/{metadata.category}">
-									{metadata.category}
-								</a>
+								<a href={resolve(`articles/${metadata.category}`)}>{metadata.category}</a>
 							</div>
 						{/if}
 						{#if metadata.tags}

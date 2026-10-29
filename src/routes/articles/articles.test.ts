@@ -6,14 +6,11 @@ import { render, screen } from '@testing-library/svelte';
 import Page from './+page.svelte';
 import { onePost } from 'test-setup/mocks/blogPostsMock';
 
-vi.mock('$app/stores', async () => {
-	const { readable } = await import('svelte/store');
-	return {
-		page: readable({
-			url: new URL('http://localhost')
-		})
-	};
-});
+vi.mock('$app/state', () => ({
+	page: {
+		url: new URL('http://localhost')
+	}
+}));
 
 vi.mock('$app/navigation', () => ({
 	goto: vi.fn()

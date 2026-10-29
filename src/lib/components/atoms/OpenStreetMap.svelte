@@ -4,7 +4,7 @@
 	import TileLayer from 'ol/layer/Tile';
 	import XYZ from 'ol/source/XYZ';
 
-	import type { OpenStreetMapPosition } from '$lib/types/openStreetMap';
+	import type { OpenStreetMapPosition } from '#lib/types/openStreetMap.js';
 	import { fromLonLat } from 'ol/proj';
 	export let mapPosition: OpenStreetMapPosition;
 

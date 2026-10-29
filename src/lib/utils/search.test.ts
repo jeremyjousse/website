@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 
-import type { MarkdownPostMetadataAndSlug } from '$lib/types/markdownPost';
+import type { MarkdownPostMetadataAndSlug } from '#lib/types/markdownPost.js';
 import { filterArticles } from './search';
 
 describe('filterArticles', () => {

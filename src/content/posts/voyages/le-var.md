@@ -14,8 +14,8 @@ tags:
 ---
 
 <script lang="ts">
-import BlogPostImage from '$lib/components/atoms/BlogPostImage.svelte'
-import OpenStreetMap from '$lib/components/atoms/OpenStreetMap.svelte'
+import BlogPostImage from '#lib/components/atoms/BlogPostImage.svelte'
+import OpenStreetMap from '#lib/components/atoms/OpenStreetMap.svelte'
 </script>
 
 A deux jours de notre départ en Sicile, billets en poche et valises presque faites,

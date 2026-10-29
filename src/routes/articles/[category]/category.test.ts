@@ -1,21 +1,17 @@
 import { describe, expect, it, vi } from 'vitest';
 import { render, screen } from '@testing-library/svelte';
 
-import { ArticleState } from '$lib/components/context/article.svelte';
-import type { MarkdownPostMetadataAndSlug } from '$lib/types/markdownPost';
+import { ArticleState } from '#lib/components/context/article.svelte.js';
+import type { MarkdownPostMetadataAndSlug } from '#lib/types/markdownPost.js';
 import Page from './+page.svelte';
 
 vi.mock('$app/paths', () => ({
-	base: ''
+	resolve: (path: string) => `/${path}`
 }));
 
-// We need to mock $app/stores for ArticleSearch
-vi.mock('$app/stores', () => ({
+vi.mock('$app/state', () => ({
 	page: {
-		subscribe: (fn: any) => {
-			fn({ url: new URL('http://localhost') });
-			return () => {};
-		}
+		url: new URL('http://localhost')
 	}
 }));
 
@@ -24,15 +20,15 @@ vi.mock('$app/navigation', () => ({
 	goto: vi.fn()
 }));
 
-// We need to mock $app/environment for ArticleSearch
-vi.mock('$app/environment', () => ({
+// We need to mock $app/env for ArticleSearch
+vi.mock('$app/env', () => ({
 	browser: true
 }));
 
 // Mock the context module
 const mockArticleState = new ArticleState();
-vi.mock('$lib/components/context/article.svelte', async () => {
-	const actual = await vi.importActual('$lib/components/context/article.svelte');
+vi.mock('#lib/components/context/article.svelte.js', async () => {
+	const actual = await vi.importActual('#lib/components/context/article.svelte.js');
 	return {
 		...actual,
 		getArticleState: () => mockArticleState,

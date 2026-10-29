@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
-	import { page } from '$app/stores';
-	import { browser } from '$app/environment';
-	import { getArticleState } from '$lib/components/context/article.svelte';
+	import { page } from '$app/state';
+	import { browser } from '$app/env';
+	import { getArticleState } from '#lib/components/context/article.svelte.js';
 
 	let searchInput = $state<HTMLInputElement>();
 	let mobileInput = $state<HTMLInputElement>();
@@ -14,8 +14,9 @@
 
 	function updateUrl(query: string) {
 		clearTimeout(timer);
+
 		timer = setTimeout(() => {
-			const url = new URL($page.url);
+			const url = new URL(page.url.href);
 			const current = url.searchParams.get('q') || '';
 			if (query === current) return;
 
@@ -24,7 +25,7 @@
 			} else {
 				url.searchParams.delete('q');
 			}
-			goto(url, { replaceState: true, keepFocus: true, noScroll: true });
+			goto(url, { replace: true, reset: false });
 		}, 300);
 	}
 
@@ -72,7 +73,7 @@
 	}
 
 	$effect(() => {
-		if (browser) syncFromUrl($page.url.searchParams.get('q'));
+		if (browser) syncFromUrl(page.url.searchParams.get('q'));
 	});
 
 	$effect(() => {
@@ -111,7 +112,7 @@
 				stroke-linejoin="round"
 				stroke-width="2"
 				d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-			/>
+			></path>
 		</svg>
 	</button>
 

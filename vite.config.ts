@@ -1,3 +1,8 @@
+import adapter from '@sveltejs/adapter-static';
+import { mdsvex } from 'mdsvex';
+import preprocess from 'svelte-preprocess';
+import rehypeExternalLinks from 'rehype-external-links';
+import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 import { fileURLToPath } from 'node:url';
 import { defineConfig } from 'vitest/config';
 import istanbul from 'vite-plugin-istanbul';
@@ -15,7 +20,30 @@ export default defineConfig({
 		}
 	},
 	plugins: [
-		sveltekit(),
+		sveltekit({
+			extensions: ['.svelte', '.md'],
+			preprocess: [
+				preprocess(),
+				vitePreprocess(),
+				mdsvex({
+					extensions: ['.md'],
+					rehypePlugins: [
+						[
+							rehypeExternalLinks,
+							{
+								rel: ['nofollow', 'noopener', 'noreferrer', 'external'],
+								target: '_blank'
+							}
+						]
+					]
+				})
+			],
+			adapter: adapter(),
+			paths: {
+				base: process.env.NODE_ENV === 'production' ? '/website' : ''
+			},
+			prerender: { handleHttpError: 'warn' }
+		}),
 		tailwindcss(),
 		!process.env.VITEST &&
 			istanbul({

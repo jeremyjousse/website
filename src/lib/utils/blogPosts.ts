@@ -1,4 +1,4 @@
-import type { MarkdownPostMetadataAndSlug } from '$lib/types/markdownPost';
+import type { MarkdownPostMetadataAndSlug } from '#lib/types/markdownPost.js';
 
 /**
  * Return blogs post displayable status (boolean)
