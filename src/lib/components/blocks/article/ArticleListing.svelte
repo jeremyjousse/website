@@ -1,12 +1,12 @@
 <script lang="ts">
-	import { base } from '$app/paths';
-	import type { MarkdownPostMetadataAndSlug } from '$lib/types/markdownPost';
-	import { formatPublishedAt } from '$lib/utils/dates';
-	import BlogPostCoverImage from '$lib/components/atoms/BlogPostCoverImage.svelte';
+	import { resolve } from '$app/paths';
+	import type { MarkdownPostMetadataAndSlug } from '#lib/types/markdownPost.js';
+	import { formatPublishedAt } from '#lib/utils/dates.js';
+	import BlogPostCoverImage from '#lib/components/atoms/BlogPostCoverImage.svelte';
 
 	export let post: MarkdownPostMetadataAndSlug;
 
-	const postUrl = `${base}/articles/${post.metadata.category}/${post.slug}`;
+	const postUrl = resolve(`articles/${post.metadata.category}/${post.slug}`);
 </script>
 
 <article class="p-4 sm:flex sm:space-x-4">

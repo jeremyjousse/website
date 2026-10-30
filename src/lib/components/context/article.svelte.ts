@@ -1,8 +1,8 @@
 import { getContext, setContext } from 'svelte';
 
-import type { MarkdownPostMetadataAndSlug } from '$lib/types/markdownPost';
-import { PAGINATION_CONFIG } from '$lib/config/pagination';
-import { filterArticles } from '$lib/utils/search';
+import type { MarkdownPostMetadataAndSlug } from '#lib/types/markdownPost.js';
+import { PAGINATION_CONFIG } from '#lib/config/pagination.js';
+import { filterArticles } from '#lib/utils/search.js';
 
 const ARTICLE_KEY = Symbol('ARTICLE');
 

@@ -1,8 +1,8 @@
 import { describe, expect, it } from 'vitest';
 
 import { ArticleState } from './article.svelte';
-import type { MarkdownPostMetadataAndSlug } from '$lib/types/markdownPost';
-import { PAGINATION_CONFIG } from '$lib/config/pagination';
+import type { MarkdownPostMetadataAndSlug } from '#lib/types/markdownPost.js';
+import { PAGINATION_CONFIG } from '#lib/config/pagination.js';
 
 describe('ArticleState', () => {
 	const mockPosts: MarkdownPostMetadataAndSlug[] = [

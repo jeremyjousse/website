@@ -1,6 +1,6 @@
 <script>
-	import '$lib/styles/post.css';
-	import ArticleEditorial from '$lib/components/pages/article/ArticleEditorial.svelte';
+	import '#lib/styles/post.css';
+	import ArticleEditorial from '#lib/components/pages/article/ArticleEditorial.svelte';
 
 	export let data;
 	const { metadata, post: Post } = data;

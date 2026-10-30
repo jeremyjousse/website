@@ -1,5 +1,5 @@
 <script>
-	import AuthorInfo from '$lib/components/atoms/AuthorInfo.svelte';
+	import AuthorInfo from '#lib/components/atoms/AuthorInfo.svelte';
 </script>
 
 <section class="px-4 py-6">

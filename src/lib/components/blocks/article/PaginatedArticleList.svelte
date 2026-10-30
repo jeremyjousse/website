@@ -1,9 +1,9 @@
 <script lang="ts">
 	import ArticleListing from './ArticleListing.svelte';
-	import Pagination from '$lib/components/molecules/Pagination.svelte';
-	import ArticleSearch from '$lib/components/molecules/ArticleSearch.svelte';
-	import { setArticleState } from '$lib/components/context/article.svelte';
-	import type { MarkdownPostMetadataAndSlug } from '$lib/types/markdownPost';
+	import Pagination from '#lib/components/molecules/Pagination.svelte';
+	import ArticleSearch from '#lib/components/molecules/ArticleSearch.svelte';
+	import { setArticleState } from '#lib/components/context/article.svelte.js';
+	import type { MarkdownPostMetadataAndSlug } from '#lib/types/markdownPost.js';
 	import { untrack } from 'svelte';
 
 	interface Props {

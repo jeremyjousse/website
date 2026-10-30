@@ -1,7 +1,7 @@
-import type { MarkdownPost, MarkdownPostMetadataAndSlug } from '$lib/types/markdownPost';
+import type { MarkdownPost, MarkdownPostMetadataAndSlug } from '#lib/types/markdownPost.js';
 import { type RequestHandler, json } from '@sveltejs/kit';
 
-import { filterBlogPosts } from '$lib/utils/blogPosts';
+import { filterBlogPosts } from '#lib/utils/blogPosts.js';
 
 export const prerender = true;
 

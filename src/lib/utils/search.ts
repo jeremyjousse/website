@@ -1,4 +1,4 @@
-import type { MarkdownPostMetadataAndSlug } from '$lib/types/markdownPost';
+import type { MarkdownPostMetadataAndSlug } from '#lib/types/markdownPost.js';
 
 export function filterArticles(
 	posts: MarkdownPostMetadataAndSlug[],
