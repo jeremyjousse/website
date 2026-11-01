@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/jeremyjousse/website/compare/v1.1.0...v1.2.0) (2026-11-01)
+
+
+### Features
+
+* **blog:** :sparkles: add 2 new recipes ([076cadc](https://github.com/jeremyjousse/website/commit/076cadc9fa1b187c991b699a79221aa5c21b1a86))
+
 # [1.1.0](https://github.com/jeremyjousse/website/compare/v1.0.0...v1.1.0) (2026-11-01)
 
 
