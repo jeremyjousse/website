@@ -41,7 +41,7 @@
 		"postcss": "^8.5.29",
 		"rehype-external-links": "^3.0.0",
 		"semantic-release": "^25.0.9",
-		"svelte": "5.57.2",
+		"svelte": "5.57.3",
 		"svelte-check": "4.7.6",
 		"svelte-preprocess": "6.0.5",
 		"tailwindcss": "^4.3.3",
