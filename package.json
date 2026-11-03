@@ -29,7 +29,7 @@
 		"@tailwindcss/vite": "^4.3.3",
 		"@testing-library/jest-dom": "^7.0.1",
 		"@testing-library/svelte": "^5.4.2",
-		"@testing-library/user-event": "^14.6.7",
+		"@testing-library/user-event": "^14.6.8",
 		"@types/node": "^26.6.6",
 		"@vitest/coverage-istanbul": "^5.0.5",
 		"dotenv": "18.0.9",
