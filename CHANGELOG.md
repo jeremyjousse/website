@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/jeremyjousse/website/compare/v1.2.0...v1.2.1) (2026-11-15)
+
+
+### Bug Fixes
+
+* **blog:** :sparkles: update gateau ([9239d7f](https://github.com/jeremyjousse/website/commit/9239d7f0ee5554d5598fbf300f6e7e114b932b53))
+
 # [1.2.0](https://github.com/jeremyjousse/website/compare/v1.1.0...v1.2.0) (2026-11-01)
 
 
