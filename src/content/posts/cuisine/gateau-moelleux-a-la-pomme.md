@@ -18,7 +18,7 @@ summary: Un gâteau fondant et parfumé aux pommes, simple à réaliser
 - 250g de farine
 - 2 oeufs
 - 150g de yaourt (type grec ou velouté)
-- 150g de cassonade (ou 100g + 25g de stevia)
+- 80g de sucre
 - 50 ml d'huile de tournesol, de pépins de raisin ou d'arachide
 - 1 sachet (10g) de levure chimique
 - 4 pommes
