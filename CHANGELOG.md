@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/jeremyjousse/website/compare/v1.3.0...v1.4.0) (2026-11-21)
+
+
+### Features
+
+* **blog:** :sparkles: update cheesecake ([0a5936c](https://github.com/jeremyjousse/website/commit/0a5936cd6b6337af2f52fcd815e412955ab23c61))
+
 # [1.3.0](https://github.com/jeremyjousse/website/compare/v1.2.1...v1.3.0) (2026-11-21)
 
 
