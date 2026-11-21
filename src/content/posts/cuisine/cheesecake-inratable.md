@@ -23,7 +23,7 @@ summary: La recette du cheesecake inratable au fromage blanc.
 
 - 500g de fromage blanc (type faisselle)
 - 25 cl de crème fraîche
-- 150g de sucre semoule
+- 80g de sucre semoule
 - 2 cuillères à soupe de farine
 - 3 œufs
 - Extrait de vanille, d'orange ou zeste de citron (au choix)
@@ -76,7 +76,7 @@ Retirer à la cuillère le surplus de croûte s'il dépasse sur les côtés pour
 
 ### Étape 12
 
-Enfourner pour 50 à 55 minutes de cuisson, jusqu'à ce que la garniture soit bien ferme au toucher.
+Baisser le four à 160°C. Enfourner pour 40 minutes de cuisson, jusqu'à ce que la garniture soit bien ferme au toucher.
 
 ### Étape 13
 
