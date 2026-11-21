@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/jeremyjousse/website/compare/v1.2.1...v1.3.0) (2026-11-21)
+
+
+### Features
+
+* **articles:** persist pagination state in URL ([63bca14](https://github.com/jeremyjousse/website/commit/63bca1433e74f4d4c04a992b933870056e467154))
+
 ## [1.2.1](https://github.com/jeremyjousse/website/compare/v1.2.0...v1.2.1) (2026-11-15)
 
 
