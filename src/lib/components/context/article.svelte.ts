@@ -20,6 +20,7 @@ export class ArticleState {
 	}
 
 	set posts(value: MarkdownPostMetadataAndSlug[]) {
+		if (this._posts === value) return;
 		this._posts = value;
 		this.currentPage = 1;
 	}

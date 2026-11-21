@@ -9,6 +9,7 @@
 	let isSearchActive = $state(false);
 	let timer: ReturnType<typeof setTimeout> | undefined;
 	let lastSyncedQuery: string | null = null;
+	let hasLocalSearchChange = false;
 
 	const articleState = getArticleState();
 
@@ -18,13 +19,17 @@
 		timer = setTimeout(() => {
 			const url = new URL(page.url.href);
 			const current = url.searchParams.get('q') || '';
-			if (query === current) return;
+			const shouldClearPage = hasLocalSearchChange && url.searchParams.has('page');
+			hasLocalSearchChange = false;
+
+			if (query === current && !shouldClearPage) return;
 
 			if (query) {
 				url.searchParams.set('q', query);
 			} else {
 				url.searchParams.delete('q');
 			}
+			url.searchParams.delete('page');
 			goto(url, { replace: true, reset: false });
 		}, 300);
 	}
@@ -77,7 +82,13 @@
 	});
 
 	$effect(() => {
-		if (browser) updateUrl(articleState.searchQuery);
+		if (browser) {
+			const query = articleState.searchQuery;
+			if (query !== (lastSyncedQuery ?? '')) {
+				hasLocalSearchChange = true;
+			}
+			updateUrl(query);
+		}
 		return () => {
 			if (timer) clearTimeout(timer);
 		};

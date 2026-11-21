@@ -4,6 +4,7 @@ import { fireEvent, render, screen, waitFor } from '@testing-library/svelte';
 import ArticleSearch from './ArticleSearch.svelte';
 import { ArticleState } from '#lib/components/context/article.svelte.js';
 import { goto } from '$app/navigation';
+import { page } from '$app/state';
 
 // Mock dependencies
 vi.mock('$app/navigation', () => ({
@@ -35,6 +36,7 @@ vi.mock('#lib/components/context/article.svelte.js', async () => {
 describe('ArticleSearch', () => {
 	beforeEach(() => {
 		mockArticleState.searchQuery = '';
+		page.url = new URL('http://localhost');
 		vi.clearAllMocks();
 	});
 
@@ -72,6 +74,51 @@ describe('ArticleSearch', () => {
 		await waitFor(
 			() => {
 				expect(goto).toHaveBeenCalledTimes(1);
+			},
+			{ timeout: 1000 }
+		);
+	});
+
+	it('clears page param when search query changes', async () => {
+		page.url = new URL('http://localhost/articles?page=2');
+		render(ArticleSearch);
+		const input = screen.getByPlaceholderText('Search articles...');
+
+		await fireEvent.input(input, { target: { value: 'svelte' } });
+
+		await waitFor(
+			() => {
+				expect(goto).toHaveBeenCalled();
+				const [url, options] = vi.mocked(goto).mock.calls[0] as [
+					URL,
+					{ replace?: boolean; reset?: boolean }
+				];
+				expect(url.searchParams.get('q')).toBe('svelte');
+				expect(url.searchParams.has('page')).toBe(false);
+				expect(options).toEqual({ replace: true, reset: false });
+			},
+			{ timeout: 1000 }
+		);
+	});
+
+	it('clears page param when search is edited and reverted within debounce window', async () => {
+		page.url = new URL('http://localhost/articles?q=svelte&page=2');
+		render(ArticleSearch);
+		const input = screen.getByPlaceholderText('Search articles...');
+
+		await fireEvent.input(input, { target: { value: 'sveltex' } });
+		await fireEvent.input(input, { target: { value: 'svelte' } });
+
+		await waitFor(
+			() => {
+				expect(goto).toHaveBeenCalledTimes(1);
+				const [url, options] = vi.mocked(goto).mock.calls[0] as [
+					URL,
+					{ replace?: boolean; reset?: boolean }
+				];
+				expect(url.searchParams.get('q')).toBe('svelte');
+				expect(url.searchParams.has('page')).toBe(false);
+				expect(options).toEqual({ replace: true, reset: false });
 			},
 			{ timeout: 1000 }
 		);
