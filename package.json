@@ -38,7 +38,7 @@
 		"ol": "10.11.0",
 		"oxfmt": "^0.72.0",
 		"oxlint": "^1.87.0",
-		"postcss": "^8.5.29",
+		"postcss": "^8.5.33",
 		"rehype-external-links": "^3.0.0",
 		"semantic-release": "^25.0.9",
 		"svelte": "5.57.2",
